@@ -1,0 +1,24 @@
+Docker
+
+Install Docker:
+sudo apt update
+sudo apt install docker.io -y
+
+Enable Docker:
+sudo systemctl enable docker
+sudo systemctl start docker
+
+Check Status:
+sudo systemctl status docker
+
+Build image from project after creating dockerfile and .dockerignore:
+docker build -t resume-analyzer .
+
+Run the docker image:
+docker run --name resume-api -p 8000:8000 -e OPENAI_API_KEY="YOUR_KEY" resume-analyzer
+
+Check Logs:
+docker logs <cont-id>
+
+Instead of docker run command you can use:
+docker compose up
