@@ -11,3 +11,5 @@ Plan:
 	
 3. Understanding Linux
 	Ricing more
+	
+

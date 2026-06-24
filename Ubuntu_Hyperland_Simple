@@ -1,0 +1,12 @@
+Ubuntu Hyperland Simple
+
+1. sudo apt update && sudo apt upgrade
+2. sudo systemctl reboot
+3. sudo apt install git wget curl perl sassc golang cargo gcc clang libdrm-dev libgtk-3-dev fzf make cmake libgbm-dev
+4. sudo apt install timeshift
+5. #Create a system frozen image in case of failure
+6. git clone --depth=1 -b 26.04 https://github.com/LinuxBeginnings/Ubintu-Hyperland.git ~/Ubuntu-Hyperland
+7. cd ~/Ubuntu-Hyperland
+8. chmod +x install.sh
+9. ./install.sh
+10. #Follow instructions and youre good to go!
