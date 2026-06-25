@@ -1,0 +1,15 @@
+Plan:
+
+1. Basics of Networking + Practice
+	Networking
+	EH - understanding attacks
+	Understanding structure - Physical + Cisco Packet Tracer
+	P.S. - Take on work by yourself
+
+2. Basic Dev Tech (Vibecoding + Understanding) + Deployment
+	FullStack + GitHub + Docker + AWS
+	
+3. Understanding Linux
+	Ricing more
+	
+
