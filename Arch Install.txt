@@ -1,0 +1,30 @@
+Arch Install Guide
+
+Network config:
+Setup wifi using iwctl or ethernet by first checking its config using ip link/ip addr
+
+on office network:
+* sudo ip addr add 90.90.91.199/23 dev enp0s18
+* sudo ip route add default via 90.90.90.10
+* sudo nano /etc/resolv.conf
+	nameserver 90.90.90.5
+P.S. to add login.sh open a port of the recievers machine and send the file using nc command through the port
+1. nc -l 1234 > login.sh (reciever)
+2. nc 90.90.91.199 1234 < login.sh (sender)
+
+* Set keyboard layout and set languages
+* Fix timedate and location
+* Disk partitioning, formatting, mounting
+* Install packages
+* fstab
+* Context switch to new system
+* setup host and hostname
+* setup users
+* Finally, do grub configuration
+* reboot and check everything
+* finally setup a graphical environment KDE/hyperland
+
+
+
+
+nikhil tell about headphones
