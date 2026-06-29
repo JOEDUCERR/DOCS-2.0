@@ -62,3 +62,30 @@ Parser directive:
 	
 * The --no-cache flag disables the build cache, forcing Docker to rebuild all layers from scratch
 E.g. docker build --no-cache -t my-image:my-tag .
+
+## Examples:
+
+Project req: node, nginx, jsx files and css files
+Dockerignore: node_modules, README.md, venv, .git
+
+We need to first install npm using package.json and package_lock.json, then copy the project files and do npm run build. Finally we can setup the nginx using the first docker config and expose port on which we want to run.
+
+<<<
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build (this converts jsx code into normal html css files)
+
+FROM nginx
+
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+>>>

@@ -13,4 +13,3 @@ Docker Daemon : You can connect to docker daemon running on a different machine 
 Command to run a specific command in docker:
 sudo docker exec <command>
 
-

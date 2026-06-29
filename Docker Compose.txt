@@ -1,0 +1,17 @@
+Docker Compose
+
+* service: computing resource that can be scaled or replace independently from other components and are backed by a set of containers.
+(inside service)
+* build: defines how to create docker image for the service
+* blkio_config: set limits on block IO devices like write speed or weight.
+* cpus: defines number of cpus given to service
+* command: overrides dockerfiles main command or CMD
+* container_name: pretty obvious
+* depends_on: defines order or service startup and shutdown (e.g. frontend depends on backend)
+* dns: defines custom dns servers to set on the container network.
+* env_file: used to specify environment variables. can be configured with "required=true"
+* expose: expose port numbers
+* models: defines ai models to be used during runtime
+* network_mode: obvious
+* ports: defines port mapping between machine and host containers
+* scale: defines the number of containers to be deployed for specific service
