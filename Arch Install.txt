@@ -24,7 +24,4 @@ P.S. to add login.sh open a port of the recievers machine and send the file usin
 * reboot and check everything
 * finally setup a graphical environment KDE/hyperland
 
-
-
-
-nikhil tell about headphones
+https://gist.github.com/mjkstra/96ce7a5689d753e7a6bdd92cdc169bae#preliminary-steps
