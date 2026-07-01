@@ -27,3 +27,24 @@ Linux Deep Dive
 * located in /etc/systemd/system or /run/systemd/system (has runtime system units) or /lib/systemd/system (has service files with least priority)
 * systemctl: start, enable, disable, status, etc.
 * systemctl list-units --type service --all (shows all services with state and desc).
+
+## Cron
+
+* time-based job scheduler to schedule and run daemon processes automatically at predefined times without intervention. Basically used to automate repetitive tasks.
+* cron keeps checking constantly the time of the system and its own time fields and runs commands defined when it reaches specified time.
+* commands or scripts are specified at crontab (cron table) where users can add, modify or remove tasks.
+* you can use 'crontab' directly to edit cronjobs. -e edit, -l view current crons and -r to remove all cronjobs.
+* location of crontab /var/spool/cron/crontabs/joeducer
+
+## rsync
+
+* Remote sync for file sharing and syncing between two different machines. This can happen over ssh or through rsync daemon using TCP.
+* It's specaility is that it only copies the difference between already synced files.
+* rsync local-file user@remote-host:remote-file
+
+## tar
+
+* used to manage archived files.
+* extract: tar -xvf file.tar
+* create a tar: tar -cvf file.tar*.c
+* -c creates a new archive, -f specifies filename of archive
