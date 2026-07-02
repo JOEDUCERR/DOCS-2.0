@@ -15,3 +15,11 @@ Docker Compose
 * network_mode: obvious
 * ports: defines port mapping between machine and host containers
 * scale: defines the number of containers to be deployed for specific service
+
+* use -f to specify location of compose file (also could be from git)
+* -p to specify project name
+* docker compose up: create and start containers
+* docker compose down: stop and remove conatiners
+* docker compose stop: just stops the services
+* docker compose logs: monitor issues
+* docker compose ps: view running compose configs
