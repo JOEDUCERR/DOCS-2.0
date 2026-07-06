@@ -1,0 +1,61 @@
+* basic qr code generation with json info behind it.
+* employee recognition by them logging in or by entering their emp id (tedious).
+
+Adv: Less workload on IT team.
+
+Dis: Less human confirmation
+Sol: HITT Human in the loop. Whenever someone takes an asset it pings the admin in telegram or their email (but this clutters the email as this is a daily asset portal.)
+
+
+Basic Workflow:
+1. Employee takes asset out of drawer.
+2. Scans the bar-code mentioned.
+3. Instead of immediately assigning it, show
+	* Mac Mini
+	* Take Asset
+	* Return Asset
+4. After the user presses any of the two it asks for the Emp ID.
+4.1 Instead of asking for the Emp ID, the user may log into their account using their company email where it stores all info including company ID. So basically backend already knows who is taking or returning the assets.
+* A warning is showed on strict rule against misplacement or damage of company property.
+5. As soon as the user presses submit it logs onto the backend.
+
+Future Ideas:
+* NFC cards
+* Employee QR
+* Face recognition
+
+* This project will be built around transaction history with timestamps.
+-----------------------------------------------------------------------
+
+Prompt:
+Now, lets build the web app where first, the user is greeted on the login screen with 2 options. First whether they want to login as an IT admin or as an employee.
+
+IT admin page:
+After logging in. There should be a list of all assets assigned currently. The option to view history on a previously added asset in the database. Also there should be an create asset button where it takes you to a screen where you can add necessary asset details like asset_name, asset_location_id, asset_serial_no, etc. and this page after submitting would generate a unique local qr code for you which would be read at the employee login page to mark as assigned or returned. Also in the IT admin page, there should be a button of manually return the item incase an employee is unable to or assign an asset manually to an employee through their emp id (this would also be connected to the employee db incase his or her portal/user is not working)
+
+Employee page:
+After logging in there should be an option of taking an asset or returning an asset. On first login every user must first fill out their details using email and password. then add their name, emp_id and designation. After getting logged in the two options must be shown and the designation may only be changed later on not the emp_id. On the taking an asset portal there should be a qr code scanner (which if doesnt work there should be a message to contact IT Team to assign the asset). same qr code scanner on returning the asset with a message if error.
+
+-----------------------------------------------------------------------
+
+MVP:
+Authentication (Admin & Employee)
+Employee profile creation
+Admin asset creation
+QR code generation
+QR scanner
+Asset issue
+Asset return
+Manual admin assign/return
+Asset history
+Dashboard and search
+
+Tech Stack:
+Frontend: React + Vite
+Backend: FastAPI
+Database: PostgreSQL (or SQLite for initial development)
+ORM: SQLAlchemy
+Authentication: JWT
+QR Generation: qrcode
+QR Scanner: html5-qrcode
+Deployment: Docker Compose (frontend, backend, database)
