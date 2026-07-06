@@ -1,0 +1,7 @@
+AI Web Dev
+
+Tools:
+1. V0.dev : beatuiful UI UX designs with code by chatting
+2. cursor IDE : composer ai feature and paste V0 code
+3. supabase : backend or database and then ask cursor how to integrate
+4. vercel/deployment: IKB (Ig I know better)
