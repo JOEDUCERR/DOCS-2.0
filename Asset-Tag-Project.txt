@@ -59,3 +59,10 @@ Authentication: JWT
 QR Generation: qrcode
 QR Scanner: html5-qrcode
 Deployment: Docker Compose (frontend, backend, database)
+
+Builder:
+GPT
+GitHub copilot
+Cursor
+Continue.dev+local models
+Claude: for review
