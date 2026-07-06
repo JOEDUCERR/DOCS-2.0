@@ -61,8 +61,61 @@ QR Scanner: html5-qrcode
 Deployment: Docker Compose (frontend, backend, database)
 
 Builder:
-GPT
+GPT: Main
 GitHub copilot
 Cursor
 Continue.dev+local models
 Claude: for review
+
+
+-------------------------------------------------------------------------------------
+
+# Development Plan
+
+We'll work in milestones so the project is always in a runnable state.
+
+### Milestone 1
+- Backend setup
+- Database
+- JWT Authentication
+- Admin Login
+- Employee Registration/Login
+
+### Milestone 2
+- Admin Dashboard
+- Asset CRUD
+- QR Generation
+
+### Milestone 3
+- Employee Dashboard
+- QR Scanner
+- Assign Asset
+- Return Asset
+
+### Milestone 4
+- History
+- Manual Assign
+- Manual Return
+
+### Milestone 5
+- Docker
+- Polish
+- Deployment
+
+---
+
+## Ground Rules
+
+To keep the codebase clean, we'll follow a few principles:
+
+- Don't hardcode values that belong in the database.
+- Use one responsibility per file (models, routes, services, etc.).
+- Use Git commits after every completed milestone.
+- Test each feature before moving to the next.
+
+I also recommend we use **feature branches** (e.g., `feature/auth`, `feature/assets`) so you get practice with a professional Git workflow.
+
+## First Task
+
+Create the project with this structure:
+
