@@ -1091,7 +1091,12 @@ Do not implement any other features beyond this scope.
 
 Issues:
 * Employee cannot return an asset without IT admin access or intervention.
-* 
+* Auth during account creation: Email OTP
+* Design Ideas:
+	* Better looking Asset dashboard list in both User and Admin
+	* Custom colors
 
-Further Adv:
+TODO Further Adv:
 * To first issue, maybe there could be a approval system where any of IT admins which are logged in approve of an asset being taken. (Helps if no IT personel are in the office and an employee needs an asset urgently). Also helps to find out who approved.
+* Auth during acc creation
+* Add a proper color theme. Dark and modern (should not look vibe coded).
