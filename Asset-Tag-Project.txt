@@ -1093,8 +1093,17 @@ Issues/Ideas:
 * Auth during account creation: Email OTP
 * Confirmation dialog before admin assigns
 
-TODO Further Adv:
-* To first issue, maybe there could be a approval system where any of IT admins which are logged in approve of an asset being taken. (Helps if no IT personel are in the office and an employee needs an asset urgently). Also helps to find out who approved.
-* Auth during acc creation
+* Request asset beforehand
+* damaged asset workflow (when user returns IT team can update condition which will go in the asset history as well)
+* Add a proper dashboard with charts and graphs
+
+More features:
+* Print all QR labels in one click
+* Docker deployment
+* Network Device Inventory (Details about IP addresses, MAC Addresses, VLANs, physical IT Infra information, SIP Phone IP info)
+
+We keep the QR code thing a side feature. leave it there but its USP will be requesting the asset beforehand. Other then that in the IT Admin portal, if the admin wants to assign a existing device to a user, they can search up their name and add.
 
 current codex account: joeg123456789014@gmail.com
+
+Main Concern: Configurable approval workflow (addresses management's security concern).
