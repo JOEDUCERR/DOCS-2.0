@@ -1,0 +1,25 @@
+Java for IPA
+
+Basics:
+* Used to build Applications for web, desktop, mobile and also code games.
+* Open source and free
+* Close to c or c++
+
+--------------------------------
+
+Basic Code example:
+public class Main {
+    public static void main(String[] args) {
+        String name = "John";
+        System.out.println(name + " is my name");
+    }
+}
+
+--------------------------------
+
+* Java class name must always start with capital letter
+* every java file must have main() method as it is where the program starts running.
+* System.out.println():
+	System = built in java class
+	out = member of System (output)
+	println() = method for print line

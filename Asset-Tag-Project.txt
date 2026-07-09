@@ -1093,13 +1093,11 @@ Issues/Ideas:
 * Auth during account creation: Email OTP
 * Confirmation dialog before admin assigns
 
-* Request asset beforehand
 * damaged asset workflow (when user returns IT team can update condition which will go in the asset history as well)
 * Add a proper dashboard with charts and graphs
 
 More features:
 * Print all QR labels in one click
-* Docker deployment
 * Network Device Inventory (Details about IP addresses, MAC Addresses, VLANs, physical IT Infra information, SIP Phone IP info)
 
 We keep the QR code thing a side feature. leave it there but its USP will be requesting the asset beforehand. Other then that in the IT Admin portal, if the admin wants to assign a existing device to a user, they can search up their name and add.
