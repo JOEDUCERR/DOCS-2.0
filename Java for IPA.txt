@@ -35,6 +35,8 @@ Data types = String, int, float, char, boolean
 * add final before type to make it immutable
 * Types cannot change later in the program for a variable.
 
+var keyword: this helps Java assign data type according to value. (You cant declare it without assigning value). Actual value is just to make code easier to read.
+
 Primitive Data Types:
 byte 	Stores whole numbers from -128 to 127 to (save memory)
 short 	Stores whole numbers from -32,768 to 32,767
@@ -47,3 +49,72 @@ char 	Stores a single character/letter or ASCII values
 
 Non Primitive Data Types:
 Strings, Arrays, Classes
+
+--------------------------------------------
+
+Type Casting:
+Widening Casting (automatic) - converting a smaller type to a larger type size
+byte -> short -> char -> int -> long -> float -> double
+
+Narrowing Casting (manual) - converting a larger type to a smaller type size
+double -> float -> long -> int -> char -> short -> byte 
+E.g.:
+double a = 9.7d;
+int b = (int) a;
+
+Operators:
+= 	x = 5 	x = 5 	
++= 	x += 3 	x = x + 3 	
+-= 	x -= 3 	x = x - 3 	
+*= 	x *= 3 	x = x * 3 	
+/= 	x /= 3 	x = x / 3 	
+%= 	x %= 3 	x = x % 3 	
+&= 	x &= 3 	x = x & 3 	
+|= 	x |= 3 	x = x | 3 	
+^= 	x ^= 3 	x = x ^ 3 	
+>>= 	x >>= 3 	x = x >> 3 	
+<<= 	x <<= 3 	x = x << 3
+
+Comparison:
+== 	Equal to 	x == y 	
+!= 	Not equal 	x != y 	
+> 	Greater than 	x > y 	
+< 	Less than 	x < y 	
+>= 	Greater than or equal to 	x >= y 	
+<= 	Less than or equal to 	x <= y 	
+
+Logical:
+&&  	Logical and 	Returns true if both statements are true 	x < 5 &&  x < 10 	
+||  	Logical or 	Returns true if one of the statements is true 	x < 5 || x < 4 	
+! 	Logical not 	Reverse the result, returns false if the result is true 	!(x < 5 && x < 10) 	
+
+----------------------------------------------------------
+
+Strings:
+a.length()
+toUpperCase()
+indexOf(): find position of word or letter
+equals(): comparison
+trim(): remove whitespace
+concat()
+
+Math:
+abs()
+pow(): power
+round(): round off
+
+---------------------------------------------------------
+
+Switch:
+
+int expression = 2;
+switch (expression) {
+	case 1:
+		print(correct);
+		break;
+	case 2:
+		print(wrong);
+		break;
+}
+* break keyword breaks out of switch block
+* 'default' instead of cases runs if there is no matching case
