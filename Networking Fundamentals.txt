@@ -1,0 +1,17 @@
+Networking Fundamentals further:
+
+DHCP: Dynamic Host Configuration Protocol. Port number 67 for server and 68 for client.
+	Dynamic: Automatically gets assigned as per availability.
+	Host: Address of each machine
+It maintains a pool of available IP addresses and assigns as per need. Also provides subnet mask, default gateway and DNS. It first discovers (broadcast and discover packet), offers (receives offer packet and then sends request packet to which the main server responds first), request and then Acknowledges (Ack packet).
+
+APIPA: Automatic Private IP Addressing. Helps pcs to automatically configure IP address and subnet mask when DHCP server is unreachable.
+	Range: 169.254.0.1-169.254.255.254 (255.255.0.0)
+Enables host to still talk to other hosts in the same network. In this state it still keeps checking for DHCP server if it comes online.
+
+STP: Spanning Tree Protocol (IEEE 802.D). Ensures there are no loops in the network between switches. If there is same info sent between all switches it blocks the one port on switches to prevent it from going back to the source and looping.
+<<<Packet -> Root switch -> Designated switch (desig port which is selected using the best path to share info between switches) -> Nonroot switches>>>
+	BPDU: Bridge Protocol Data Unit. used to share STP info with switches about who is the root, designated and nonroot switches. Each switch has 8 byte switch ID.
+If the bridge priority is same on all switches, MAC address is used to break the tie (lowest MAC will become root). We should avoid this as it can cause low performance.
+Also we select a root secondary as a backup switch incase the primary root bridge fails.
+RSTP: Rapid STP (802.1Q). Faster than standard STP.
