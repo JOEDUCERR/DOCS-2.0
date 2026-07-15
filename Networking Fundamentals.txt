@@ -1,13 +1,22 @@
 Networking Fundamentals further:
 
+-----------------------------------------------------------
+Stuff done: IPv4, OSI layers, Subnetting, MAC, IEEE standards, Network devices, DNS, ARP, DHCP, APIPA, STP, RSTP
+Stuff left: Cisco router, ICMP, IGP, OSPF, VLAN, HSRP, EtherChannel, DHCPSnooping, ACL, NAT, IPv6, etc
+-----------------------------------------------------------
+
 DHCP: Dynamic Host Configuration Protocol. Port number 67 for server and 68 for client.
 	Dynamic: Automatically gets assigned as per availability.
 	Host: Address of each machine
 It maintains a pool of available IP addresses and assigns as per need. Also provides subnet mask, default gateway and DNS. It first discovers (broadcast and discover packet), offers (receives offer packet and then sends request packet to which the main server responds first), request and then Acknowledges (Ack packet).
 
+-----------------------------------------------------------
+
 APIPA: Automatic Private IP Addressing. Helps pcs to automatically configure IP address and subnet mask when DHCP server is unreachable.
 	Range: 169.254.0.1-169.254.255.254 (255.255.0.0)
 Enables host to still talk to other hosts in the same network. In this state it still keeps checking for DHCP server if it comes online.
+
+-----------------------------------------------------------
 
 STP: Spanning Tree Protocol (IEEE 802.D). Ensures there are no loops in the network between switches. If there is same info sent between all switches it blocks the one port on switches to prevent it from going back to the source and looping.
 <<<Packet -> Root switch -> Designated switch (desig port which is selected using the best path to share info between switches) -> Nonroot switches>>>
@@ -15,3 +24,21 @@ STP: Spanning Tree Protocol (IEEE 802.D). Ensures there are no loops in the netw
 If the bridge priority is same on all switches, MAC address is used to break the tie (lowest MAC will become root). We should avoid this as it can cause low performance.
 Also we select a root secondary as a backup switch incase the primary root bridge fails.
 RSTP: Rapid STP (802.1Q). Faster than standard STP.
+
+-----------------------------------------------------------
+
+IP routing: Process of sending packets to host from one network to another remote network. Process is done by routers. For this reason Default gateways are used. "Route tables" are stored in RAM of router having info about paths to destination networks.
+
+Routing protocols: These are configured on routers. These can be dynamic unlike static IPv4 routing and can be learned via routing protocols. RIP, EIGRP, OSPF
+	Distance vector: sends entire routing table. RIP Uses number of hops as metric. OSPF uses SPF shortest path first algo to find the best route. Meanwhile EIGRP is an advanced distance vector.
+	Link state: sends only link state info
+	
+Loopback Interface/address: A loopback interface is a virtual interface in our network device that is always up and active after it has been configured. Like our physical interface, we assign a special IP address which is called a loopback address or loopback IP address.
+
+-----------------------------------------------------------
+
+VLANS: Virtual LANs. Logical groupings of devices in the same broadcast domain. Configured on switches. Reduces security risk.
+To identify VLAN using a packet a tag is used. This is done by a protocol called Inter-Switch link (only in old cisco switches). Otherwise 802.1Q is used for tagging in Cisco switches.
+When trying to make a VLAN for SIP phones we need to define two VLANs on the switch port – data VLAN and voice VLAN.
+
+InterVLAN communication: Done using a Level 3 device like router or Cisco catalyst switches. But another workaround is to use one router interface with trunking enable called router on a stick (ROAS).
