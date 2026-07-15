@@ -1,8 +1,7 @@
 Networking Fundamentals further:
 
 -----------------------------------------------------------
-Stuff done: IPv4, OSI layers, Subnetting, MAC, IEEE standards, Network devices, DNS, ARP, DHCP, APIPA, STP, RSTP
-Stuff left: Cisco router, ICMP, IGP, OSPF, VLAN, HSRP, EtherChannel, DHCPSnooping, ACL, NAT, IPv6, etc
+Stuff left: Cisco router, ICMP, HSRP, IPv6, etc
 -----------------------------------------------------------
 
 DHCP: Dynamic Host Configuration Protocol. Port number 67 for server and 68 for client.
@@ -29,7 +28,7 @@ RSTP: Rapid STP (802.1Q). Faster than standard STP.
 
 IP routing: Process of sending packets to host from one network to another remote network. Process is done by routers. For this reason Default gateways are used. "Route tables" are stored in RAM of router having info about paths to destination networks.
 
-Routing protocols: These are configured on routers. These can be dynamic unlike static IPv4 routing and can be learned via routing protocols. RIP, EIGRP, OSPF
+Routing protocols: These are configured on routers. These can be dynamic unlike static IPv4 routing and can be learned via routing protocols. RIP, EIGRP, OSPF. IPv6 uses RIPng, EIGRP, etc.
 	Distance vector: sends entire routing table. RIP Uses number of hops as metric. OSPF uses SPF shortest path first algo to find the best route. Meanwhile EIGRP is an advanced distance vector.
 	Link state: sends only link state info
 	
@@ -66,3 +65,19 @@ NAT: Network Address Translation. Translating private IP address to a single pub
 PAT: Port Address Translation is used to connect a single IP address for all private IP addresses, but a different port is assigned to each private IP. (Most common) It is uused to support many hosts with a few public IPs. (NAT Translation Table).
 
 -----------------------------------------------------------
+
+IPv6:
+* 3.4 x 10^38 addresses.
+* 128 bit addresses instead of 32.
+* IPSec security built into IPv6.
+* Simple headers than IPv4
+* No NAT need as too many addresses.
+* autmatic configuration (stateless)
+* 40 bytes long packet header/
+* works the same way in routing like IPv4.
+* This uses 8 groups of 4 hexadecimal digits separated by colons.
+* we can assign ipv6 addresses using DHCPv6.
+
+-----------------------------------------------------------
+
+
