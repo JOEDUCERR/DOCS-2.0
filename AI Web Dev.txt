@@ -10,4 +10,6 @@ Ongoing:
 ai-resume-analyzer-adv : Basic Frontend and Backend working. Suitable for a larger Recruitment suite.
 (Enterprise suites: Zoho recruit, ATS India, Odoo, Greenhouse, PeoplesHR, apna.co)
 
-assetflow : 
+assetflow : Check asset-tag-project file for detail.
+
+App like Git for productivity (GitHub Contribution graph).

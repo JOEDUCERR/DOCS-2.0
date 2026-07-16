@@ -1,15 +1,17 @@
 Plan:
 
-1. Basics of Networking + Practice
-	Networking
-	EH - understanding attacks
-	Understanding structure - Physical + Cisco Packet Tracer
-	P.S. - Take on work by yourself
+1. Basics of Networking
+	EH - understanding attacks and avoiding them.
+	Creating a network in Cisco packet tracer.
 
 2. Basic Dev Tech (Vibecoding + Understanding) + Deployment
 	FullStack + GitHub + Docker + AWS
+	App like Git for productivity (GitHub Contribution graph).
 	
 3. Understanding Linux
 	Ricing more
 	
+4. Agentic: OpenClaw + Hermes
+	multi agent system
+	secure (server hardening)
 
