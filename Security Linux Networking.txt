@@ -26,3 +26,31 @@ Solution:
 	* Overkill would be using a cryptographic tunnel.
 
 ---------------------------------------------------------------------
+
+Confidentiality attack:
+	Packet capture
+	Ping sweep and port scan
+	dumpster diving: Company conf info thrown
+	EMI interception: Unshielded twisted pair
+	Wiretapping
+	Social engineering
+Integrity attack: Attempts to alter important data.
+	Trojan horse: a program impersonating the real one used to steal data
+	Keylogger: Obvious.
+	Brute force/Dictionary
+Availability attack:
+	Dos
+	DDoS
+	TCP SYN flood
+Smurf attack:
+	Electrical disturbance
+	Gas
+	Temp
+	
+---------------------------------------------------------------------
+
+Server hardening: Practice of changing server config at all layers to minimize attacks and increase resistance to penetration attempts. Basically minimizing the number of vulnerabilities.
+
+Web app server hardening:
+	Enable TLS/SSL: Basically enabling HTTPS to encrypt the comms between client and server. The web host needs to create a certificate and configure it.
+	Restrict what values clients can send in the 'Host' HTTP request header. As the HTTP request header contains hostname and port number as we need to restrict and specify the hosts you want to allow Server to serve.
