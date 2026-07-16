@@ -18,6 +18,4 @@ Finish one before moving to the next.
 	secure (server hardening)
 	
 	
-Today: Understanding Network attacks and how to avoid them. For OpenClaw server hardening.
-
-I want to download OpenClaw on my machine and optimize it. Firstly I am using an Ubuntu machine and want it to have access according to demand. Also I need to optimize it doing server hardening on it so that there is integrity. If it needs to be setup on a closed system I want to do that. Apart from that I need to add RAG on it. Firstly, I want to set this all up then later we will use local models on it
+Today: Understanding Network attacks and how to avoid them.

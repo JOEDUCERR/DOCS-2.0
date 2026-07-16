@@ -1,0 +1,16 @@
+Cisco Packet Tracer
+
+Router Config:
+	Configuring g0/0 port which is connected to a switch to access internet.
+	1. enable (user execution mode to privilege mode)
+	2. configure terminal (opens global config mode)
+	3. interface g0/0
+	4. ip address 192.168.1.1 255.255.255.0
+	5. no shutdown
+	6. exit
+	(for configuring more than one port after exit type interface <port name> 192.168.2.1/24)
+	
+PC config:
+	1. go to desktop->IP configuration
+	2. give it an address coming under the one given to the port
+	3. set default gateway as the one given in the router
