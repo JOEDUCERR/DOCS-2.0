@@ -14,3 +14,37 @@ PC config:
 	1. go to desktop->IP configuration
 	2. give it an address coming under the one given to the port
 	3. set default gateway as the one given in the router
+	
+-------------------------------------------------------------
+	
+In user mode :-
+Commands to control switch:
+  <1-99>      Session number to resume
+  connect     Open a terminal connection
+  disable     Turn off privileged commands
+  disconnect  Disconnect an existing network connection
+  enable      Turn on privileged commands
+  exit        Exit from the EXEC
+  logout      Exit from the EXEC
+  ping        Send echo messages
+  resume      Resume an active network connection
+  show        Show running system information
+  ssh         Open a secure shell client connection
+  telnet      Open a telnet connection
+  terminal    Set terminal line parameters
+  traceroute  Trace route to destination
+  
+ * Cisco switches use IOS operating system (not the apple one)
+ * "Show version" command helps to see version and config of switch.
+ 
+ -------------------------------------------------------------
+ 
+ Privilaged mode :-
+ * en or enable: starts privilaged mode.
+ * ?: shows commands available. You can even search commands using ?.
+ * configure terminal: opens global configuration mode. (end: takes you back to privielaged mode)
+ 
+If you write "show mac address-table" after doing an action between devices connected to switch it would show you the devices and ports they are connected to. This is how switches learn mac addresses.
+
+Basically the switch knows mac addresses of devices connected to it using MAC address table.
+
