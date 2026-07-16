@@ -37,7 +37,7 @@ Commands to control switch:
  * Cisco switches use IOS operating system (not the apple one)
  * "Show version" command helps to see version and config of switch.
  
- -------------------------------------------------------------
+-------------------------------------------------------------
  
  Privilaged mode :-
  * en or enable: starts privilaged mode.
@@ -48,3 +48,8 @@ If you write "show mac address-table" after doing an action between devices conn
 
 Basically the switch knows mac addresses of devices connected to it using MAC address table.
 
+-------------------------------------------------------------
+
+arp -a: Shows arp table
+arp -d: reset arp table
+Basically, once you search for a website on the server or try to communicate with another device by ping on the network the ARP (Address Resolution Protocol) table is used to identify the MAC address of that IP we put. if we run these commands after the action it shows up on the arp table.
