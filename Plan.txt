@@ -14,4 +14,6 @@ Plan:
 4. Agentic: OpenClaw + Hermes
 	multi agent system
 	secure (server hardening)
-
+	
+	
+Today: Understanding Network attacks and how to avoid them. For OpenClaw server hardening.
