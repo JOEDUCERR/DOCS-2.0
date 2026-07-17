@@ -11,9 +11,7 @@
   "is_grouped": false,
   "grouped_extensions": "",
   "mobile_settings": {
-    "enable": false,
-    "extensions": "txt",
-    "stable": true
+    "extensions": "txt"
   },
   "barefiling": true,
   "stable": true,

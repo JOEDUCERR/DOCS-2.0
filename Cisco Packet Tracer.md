@@ -53,3 +53,8 @@ Basically the switch knows mac addresses of devices connected to it using MAC ad
 arp -a: Shows arp table
 arp -d: reset arp table
 Basically, once you search for a website on the server or try to communicate with another device by ping on the network the ARP (Address Resolution Protocol) table is used to identify the MAC address of that IP we put. if we run these commands after the action it shows up on the arp table.
+
+-------------------------------------------------------------
+
+TODO:
+1. Connect two different networks using VPN.

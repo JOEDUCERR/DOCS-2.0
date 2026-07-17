@@ -4,6 +4,8 @@ Networking Fundamentals further:
 Stuff left: Cisco router, ICMP, HSRP, IPv6, etc
 -----------------------------------------------------------
 
+OSI: Open Systems Interconnection
+
 DHCP: Dynamic Host Configuration Protocol. Port number 67 for server and 68 for client.
 	Dynamic: Automatically gets assigned as per availability.
 	Host: Address of each machine
