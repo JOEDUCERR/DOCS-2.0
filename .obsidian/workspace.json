@@ -1,0 +1,229 @@
+{
+  "main": {
+    "id": "f194a602f787c32e",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a843d18d0f54620",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5adc76ca57f8dbac",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "55ffd45156b2b74b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f71ef84884c81141",
+    "type": "split",
+    "children": [
+      {
+        "id": "039918527234634a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fe2d388b2550eb93",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "989bf077307c86b7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "6a1bd65648f89ef3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "65dbee9c4aeb08e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "e3ad37445ca9dba8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a30f77e65272392b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "197d6f4223284cd5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "0fbdf7554b9700de",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "45214fb8f457ea53",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "3303409136797a29",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "4f3e4ac91fbeccde",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "55ffd45156b2b74b",
+  "lastOpenFiles": [
+    "DevOps Dashboard.md.md",
+    "Docker Compose.md",
+    "Ubuntu_Hyperland_Simple.md",
+    "Security Linux Networking.md",
+    "Plan.md",
+    "ollama_docker_setup.md",
+    "Networking Fundamentals.md",
+    "Linux Deep Dive.md",
+    "Java for IPA.md",
+    "Git.md",
+    "GitHub commands.md",
+    "DOCS final.md",
+    "Docker.md",
+    "Dockerfile 101.md",
+    "Docker 2 0.md",
+    "Docker 101.md",
+    "Cisco Packet Tracer.md",
+    "Asset-Tag-Project.md",
+    "Arch Install.md",
+    "AI Web Dev.md",
+    "Agentic Prompt Engineering.md",
+    "Active Directory.md",
+    "Docker.txt",
+    "Arch Install.txt",
+    "README.md"
+  ]
+}
