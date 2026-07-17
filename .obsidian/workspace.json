@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cisco Packet Tracer.md",
+                "file": "Networking Notes/Cisco Packet Tracer.md",
                 "mode": "source",
                 "source": false
               },
@@ -66,17 +66,21 @@
             }
           },
           {
-            "id": "d7570ce0745dfd8f",
+            "id": "492e6fdd76da3abc",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Plan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Plan"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -133,8 +137,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "65dbee9c4aeb08e2",
@@ -248,14 +251,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e8b2267804177dc6",
+  "active": "492e6fdd76da3abc",
   "lastOpenFiles": [
-    "Networking Fundamentals.md",
-    "Cisco Packet Tracer.md",
-    "Security Linux Networking.md",
+    "Networking Notes/Cisco Packet Tracer.md",
+    "README.md",
+    "Networking Notes/Networking Notes.md",
+    "Networking Notes/Security Linux Networking.md",
+    "Active Directory.md",
+    "Networking Notes/Networking Fundamentals.md",
+    "Networking Notes",
+    "Untitled.canvas",
+    "DevOps Dashboard.md.md",
     "Ubuntu_Hyperland_Simple.md",
     "Plan.md",
-    "DevOps Dashboard.md.md",
     "Docker Compose.md",
     "ollama_docker_setup.md",
     "Linux Deep Dive.md",
@@ -271,9 +279,7 @@
     "Arch Install.md",
     "AI Web Dev.md",
     "Agentic Prompt Engineering.md",
-    "Active Directory.md",
     "Docker.txt",
-    "Arch Install.txt",
-    "README.md"
+    "Arch Install.txt"
   ]
 }
