@@ -1,7 +1,7 @@
 Networking Fundamentals further:
 
 -----------------------------------------------------------
-Stuff left: Cisco router, ICMP, HSRP, IPv6, etc
+Stuff left: ICMP, HSRP, IPv6, etc
 -----------------------------------------------------------
 
 OSI: Open Systems Interconnection

@@ -18,3 +18,4 @@ A Hub of all my Documentation
 - [[Plan]]
 - [[Ubuntu_Hyperland_Simple]]
 - [[Networking Notes]]
+- [[AWS Commands]]

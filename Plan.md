@@ -17,4 +17,4 @@ Finish one before moving to the next.
 	secure (server hardening)
 	
 	
-Today: Advanced Cisco packet tracer. 
+Today: Study a topic
