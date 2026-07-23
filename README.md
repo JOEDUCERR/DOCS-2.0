@@ -19,3 +19,4 @@ A Hub of all my Documentation
 - [[Ubuntu_Hyperland_Simple]]
 - [[Networking Notes]]
 - [[AWS Commands]]
+- [[Web Hosting]]
