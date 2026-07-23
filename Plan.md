@@ -17,12 +17,4 @@ Finish one before moving to the next.
 	secure (server hardening)
 	
 	
-	Today: Prepare laptop for .NET, Study Nginx, Create Medium account for docs + trust ability.
-
-Plan Refined:
-
-1. Backend Engineering:
-		FastAPI
-		PostgreSQL
-		Redis
-		ASP .NET
+	Today: Prepare laptop for .NET, Study Nginx, Create Medium account for docs + trust ability, Tie cable with cable tie recruitment.

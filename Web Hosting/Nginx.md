@@ -14,7 +14,7 @@
 	* `/usr/local/nginx/conf`, `/etc/nginx`, or /usr/local/etc/nginx.
 ## Nginx Conf
 [[Nginx Conf Deep Dive]]
-
+[[Sever block in Nginx conf]]
 
 
 # Building a Load Balancer
