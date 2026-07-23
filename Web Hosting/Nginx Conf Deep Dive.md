@@ -1,4 +1,5 @@
 [[Sever block in Nginx conf]]
+
 Yes. **`nginx.conf` is the heart of Nginx.** Every time Nginx starts, it reads this file first. Think of it as the **master configuration** that tells Nginx:
 
 - How many worker processes to create
@@ -18,6 +19,7 @@ Let's go through it from top to bottom.
 
 ---
 
+![[nginx.conf Image.png]]
 # Overall Structure
 
 ```
