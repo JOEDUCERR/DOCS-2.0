@@ -17,4 +17,4 @@ Finish one before moving to the next.
 	secure (server hardening)
 	
 	
-	Today: Prepare laptop for .NET, Study Nginx, Create Medium account for docs + trust ability, Tie cable with cable tie recruitment.
+	Today: Prepare laptop for .NET, Tie cable with cable tie recruitment, Nginx multiple module support as reverse proxy.
