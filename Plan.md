@@ -16,5 +16,12 @@ Finish one before moving to the next.
 	multi agent system
 	secure (server hardening)
 	
+Build, Don't Talk:
+(Rules: Build smth polished with an actual USP)
+* Web Extension to talk to websites.
 	
-	Today: Prepare laptop for .NET, Tie cable with cable tie recruitment, Nginx multiple module support as reverse proxy.
+	
+	Today:
+	* Nginx multiple module support as reverse proxy.
+	* Prepare laptop for .NET
+	* Tie cable with cable tie recruitment, check for cable in room
