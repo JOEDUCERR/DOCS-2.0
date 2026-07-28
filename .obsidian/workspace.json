@@ -115,8 +115,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200.5,
-    "collapsed": true
+    "width": 200.5
   },
   "right": {
     "id": "65dbee9c4aeb08e2",
@@ -232,12 +231,16 @@
   },
   "active": "1ea8fc7d7df4cd7d",
   "lastOpenFiles": [
-    "Plan.md",
+    "README.md",
+    "GATE/GATE.md",
+    "GATE/Syllabus.md",
+    "GATE/Untitled.md",
+    "GATE",
     "AI Engineering/AI Engineering by Orielly.md",
+    "Plan.md",
     "AI Engineering/Benchmark for LMs.png",
     "AI Engineering/Multimodal model.png",
     "AI Engineering.md",
-    "README.md",
     "AI Engineering/AI Engineering.md",
     "AI Engineering",
     "Asset-Tag-Project.md",
@@ -259,8 +262,6 @@
     "ollama_docker_setup.md",
     "GitHub commands.md",
     "Git.md",
-    "Web Hosting/Sever block in Nginx conf.md",
-    "Web Hosting/Web Hosting.md",
     "Web Hosting",
     "Networking Notes",
     "Untitled.canvas",
