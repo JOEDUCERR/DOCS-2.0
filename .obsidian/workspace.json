@@ -24,37 +24,29 @@
             }
           },
           {
-            "id": "1ea8fc7d7df4cd7d",
+            "id": "b9a75483db964720",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI Engineering/AI Engineering by Orielly.md",
+                "file": "GATE/Daily Study.md",
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "AI Engineering by Orielly"
-            }
-          },
-          {
-            "id": "b9a75483db964720",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Daily Study"
             }
           },
           {
             "id": "035827aa91a84648",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ],
@@ -115,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200.5
+    "width": 200.5,
+    "collapsed": true
   },
   "right": {
     "id": "65dbee9c4aeb08e2",
@@ -229,15 +222,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1ea8fc7d7df4cd7d",
+  "active": "b9a75483db964720",
   "lastOpenFiles": [
+    "GATE/Daily Study.md",
+    "GATE/Syllabus.md",
+    "Plan.md",
+    "AI Engineering/AI Engineering by Orielly.md",
     "README.md",
     "GATE/GATE.md",
-    "GATE/Syllabus.md",
-    "GATE/Untitled.md",
     "GATE",
-    "AI Engineering/AI Engineering by Orielly.md",
-    "Plan.md",
     "AI Engineering/Benchmark for LMs.png",
     "AI Engineering/Multimodal model.png",
     "AI Engineering.md",
