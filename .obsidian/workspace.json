@@ -43,10 +43,10 @@
             "id": "f0bfd765230c2e4b",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ],
@@ -222,12 +222,13 @@
       "audio-recorder:Start/stop recording": false,
       "templater-obsidian:Templater": false,
       "obsidian-kanban:Create new board": false,
-      "omnisearch:Omnisearch": false,
-      "obsidian-full-calendar:Open Full Calendar": false
+      "omnisearch:Omnisearch": false
     }
   },
   "active": "f0bfd765230c2e4b",
   "lastOpenFiles": [
+    "README.md",
+    "GATE/Daily Study.md",
     "Untitled Diagram.svg",
     "GATE/Syllabus.md",
     "Kanban Planner.md",
@@ -245,12 +246,10 @@
     "TaskNotes",
     "Plan.md",
     "Untitled.md",
-    "GATE/Daily Study.md",
     "Untitled.base",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "AI Engineering/AI Engineering by Orielly.md",
-    "README.md",
     "AI Engineering/Benchmark for LMs.png",
     "AI Engineering/Multimodal model.png",
     "AI Engineering.md",

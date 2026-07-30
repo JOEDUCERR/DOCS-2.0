@@ -21,3 +21,4 @@ A Hub of all my Documentation
 - [[AWS Commands]]
 - [[Web Hosting]]
 - [[AI Engineering/AI Engineering|AI Engineering]]
+- [[Kanban Planner]]
