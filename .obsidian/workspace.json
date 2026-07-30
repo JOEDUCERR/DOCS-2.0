@@ -107,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200.5
+    "width": 312.5
   },
   "right": {
     "id": "65dbee9c4aeb08e2",
@@ -206,7 +206,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 377.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -222,7 +222,8 @@
       "audio-recorder:Start/stop recording": false,
       "templater-obsidian:Templater": false,
       "obsidian-kanban:Create new board": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "infranodus-graph-view:InfraNodus Graph View": false
     }
   },
   "active": "f0bfd765230c2e4b",
