@@ -223,14 +223,6 @@
       "templater-obsidian:Templater": false,
       "obsidian-kanban:Create new board": false,
       "omnisearch:Omnisearch": false,
-      "tasknotes:Open mini calendar view": false,
-      "tasknotes:Open calendar view": false,
-      "tasknotes:Open tasks view": false,
-      "tasknotes:Open agenda view": false,
-      "tasknotes:Open Kanban board": false,
-      "tasknotes:Open Pomodoro timer": false,
-      "tasknotes:Open Pomodoro statistics": false,
-      "tasknotes:Create new task": false,
       "obsidian-full-calendar:Open Full Calendar": false
     }
   },
