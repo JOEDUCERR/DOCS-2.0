@@ -16,7 +16,17 @@
               "state": {
                 "file": "Plan.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "pinned": true,
               "icon": "lucide-file",
@@ -32,7 +42,17 @@
               "state": {
                 "file": "GATE/Daily Study.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "pinned": true,
               "icon": "lucide-file",
@@ -40,7 +60,7 @@
             }
           },
           {
-            "id": "f0bfd765230c2e4b",
+            "id": "910f194ce8a65a9c",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -49,8 +69,7 @@
               "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -222,21 +241,22 @@
       "audio-recorder:Start/stop recording": false,
       "templater-obsidian:Templater": false,
       "obsidian-kanban:Create new board": false,
-      "omnisearch:Omnisearch": false,
-      "infranodus-graph-view:InfraNodus Graph View": false
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "f0bfd765230c2e4b",
+  "active": "5adc76ca57f8dbac",
   "lastOpenFiles": [
-    "README.md",
     "GATE/Daily Study.md",
+    "Plan.md",
+    "Web Hosting/nginx.conf Image.png",
+    "TaskNotes/Start Here.md",
+    "README.md",
     "Untitled Diagram.svg",
     "GATE/Syllabus.md",
     "Kanban Planner.md",
     "2026-07-30.md",
     "TaskNotes/Views/relationships.base",
     "GATE/GATE.md",
-    "TaskNotes/Start Here.md",
     "TaskNotes/Views/pomodoro-stats.base",
     "TaskNotes/Views/agenda-default.base",
     "TaskNotes/Views/calendar-default.base",
@@ -245,7 +265,6 @@
     "TaskNotes/Views/mini-calendar-default.base",
     "TaskNotes/Views",
     "TaskNotes",
-    "Plan.md",
     "Untitled.md",
     "Untitled.base",
     "Untitled 1.canvas",
@@ -257,7 +276,6 @@
     "AI Engineering/AI Engineering.md",
     "Asset-Tag-Project.md",
     "Web Hosting/Nginx Conf Deep Dive.md",
-    "Web Hosting/nginx.conf Image.png",
     "Web Hosting/Nginx.md",
     "Networking Notes/Security Linux Networking.md",
     "Networking Notes/Networking Fundamentals.md",

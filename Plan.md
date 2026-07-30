@@ -22,5 +22,4 @@ Build, Don't Talk:
 	
 	
 	Today:
-	* Nginx multiple module support as reverse proxy.
 	* Tie cable with cable tie recruitment, check for cable in room
