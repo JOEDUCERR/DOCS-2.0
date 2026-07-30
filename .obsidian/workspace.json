@@ -40,17 +40,17 @@
             }
           },
           {
-            "id": "035827aa91a84648",
+            "id": "f0bfd765230c2e4b",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -107,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200.5,
-    "collapsed": true
+    "width": 200.5
   },
   "right": {
     "id": "65dbee9c4aeb08e2",
@@ -219,23 +218,51 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "audio-recorder:Start/stop recording": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-kanban:Create new board": false,
+      "omnisearch:Omnisearch": false,
+      "tasknotes:Open mini calendar view": false,
+      "tasknotes:Open calendar view": false,
+      "tasknotes:Open tasks view": false,
+      "tasknotes:Open agenda view": false,
+      "tasknotes:Open Kanban board": false,
+      "tasknotes:Open Pomodoro timer": false,
+      "tasknotes:Open Pomodoro statistics": false,
+      "tasknotes:Create new task": false,
+      "obsidian-full-calendar:Open Full Calendar": false
     }
   },
-  "active": "b9a75483db964720",
+  "active": "f0bfd765230c2e4b",
   "lastOpenFiles": [
-    "GATE/Daily Study.md",
+    "Untitled Diagram.svg",
     "GATE/Syllabus.md",
+    "Kanban Planner.md",
+    "2026-07-30.md",
+    "TaskNotes/Views/relationships.base",
+    "GATE/GATE.md",
+    "TaskNotes/Start Here.md",
+    "TaskNotes/Views/pomodoro-stats.base",
+    "TaskNotes/Views/agenda-default.base",
+    "TaskNotes/Views/calendar-default.base",
+    "TaskNotes/Views/tasks-default.base",
+    "TaskNotes/Views/kanban-default.base",
+    "TaskNotes/Views/mini-calendar-default.base",
+    "TaskNotes/Views",
+    "TaskNotes",
     "Plan.md",
+    "Untitled.md",
+    "GATE/Daily Study.md",
+    "Untitled.base",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
     "AI Engineering/AI Engineering by Orielly.md",
     "README.md",
-    "GATE/GATE.md",
-    "GATE",
     "AI Engineering/Benchmark for LMs.png",
     "AI Engineering/Multimodal model.png",
     "AI Engineering.md",
     "AI Engineering/AI Engineering.md",
-    "AI Engineering",
     "Asset-Tag-Project.md",
     "Web Hosting/Nginx Conf Deep Dive.md",
     "Web Hosting/nginx.conf Image.png",
@@ -249,16 +276,6 @@
     "Arch Install.md",
     "AI Web Dev.md",
     "Agentic Prompt Engineering.md",
-    "Active Directory.md",
-    "Java for IPA.md",
-    "Linux Deep Dive.md",
-    "ollama_docker_setup.md",
-    "GitHub commands.md",
-    "Git.md",
-    "Web Hosting",
-    "Networking Notes",
-    "Untitled.canvas",
-    "Docker.txt",
-    "Arch Install.txt"
+    "Active Directory.md"
   ]
 }

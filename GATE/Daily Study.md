@@ -1,4 +1,3 @@
-[[GATE]]
 # GATE 2027 — Daily Study
 
 

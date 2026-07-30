@@ -2,5 +2,10 @@
   "unitade",
   "dataview",
   "obsidian-git",
-  "folder-notes"
+  "folder-notes",
+  "templater-obsidian",
+  "obsidian-kanban",
+  "obsidian-icon-folder",
+  "omnisearch",
+  "obsidian-full-calendar"
 ]

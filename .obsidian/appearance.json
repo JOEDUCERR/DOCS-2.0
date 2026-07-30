@@ -1,4 +1,7 @@
 {
   "theme": "obsidian",
-  "cssTheme": "Blackbird"
+  "cssTheme": "Tom's Theme",
+  "showViewHeader": true,
+  "showRibbon": true,
+  "nativeMenus": false
 }
