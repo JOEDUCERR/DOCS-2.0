@@ -58,16 +58,6 @@
               "icon": "lucide-file",
               "title": "Daily Study"
             }
-          },
-          {
-            "id": "910f194ce8a65a9c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
           }
         ]
       }
@@ -241,13 +231,16 @@
       "audio-recorder:Start/stop recording": false,
       "templater-obsidian:Templater": false,
       "obsidian-kanban:Create new board": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "3d-graph:3D Graph": false
     }
   },
   "active": "5adc76ca57f8dbac",
   "lastOpenFiles": [
     "GATE/Daily Study.md",
     "Plan.md",
+    "TaskNotes/Views/relationships.base",
+    "TaskNotes/Views/pomodoro-stats.base",
     "Web Hosting/nginx.conf Image.png",
     "TaskNotes/Start Here.md",
     "README.md",
@@ -255,9 +248,7 @@
     "GATE/Syllabus.md",
     "Kanban Planner.md",
     "2026-07-30.md",
-    "TaskNotes/Views/relationships.base",
     "GATE/GATE.md",
-    "TaskNotes/Views/pomodoro-stats.base",
     "TaskNotes/Views/agenda-default.base",
     "TaskNotes/Views/calendar-default.base",
     "TaskNotes/Views/tasks-default.base",

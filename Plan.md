@@ -22,4 +22,7 @@ Build, Don't Talk:
 	
 	
 	Today:
-	* Tie cable with cable tie recruitment, check for cable in room
+	* Make Decision GATE / AI/ML.
+	* Make plan accordingly
+	* Clean room
+	* 476
