@@ -63,7 +63,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI Engineering/Model Bank.md",
+                "file": "AI Engineering/AI Engineering by Orielly.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -78,7 +78,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Model Bank"
+              "title": "AI Engineering by Orielly"
             }
           },
           {
@@ -116,7 +116,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -295,19 +295,19 @@
       "3d-graph:3D Graph": false
     }
   },
-  "active": "533c4be98dfc7965",
+  "active": "769d7073d87165b7",
   "lastOpenFiles": [
-    "AI Engineering/Model Bank.md",
+    "Linux/man-documentation.md",
+    "Linux/Systemd.md",
+    "Linux/Linux.md",
     "AI Engineering/AI Engineering by Orielly.md",
+    "AI Engineering/Model Bank.md",
     "AI Engineering/Dataset Bank.md",
     "AI Engineering/AI Engineering.md",
     "AI Engineering/Industry needes in AI.md",
     "AI Engineering/How a Transformer thinks.md",
     "AI Engineering/Attention mechanism with transformers.png",
     "AI Engineering/Benchmark for LMs.png",
-    "Linux/man-documentation.md",
-    "Linux/Linux.md",
-    "Linux/Systemd.md",
     "man-documentation.md",
     "GATE/Daily Study.md",
     "Plan.md",
