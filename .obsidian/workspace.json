@@ -39,6 +39,54 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "AI Engineering/Dataset Bank.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Dataset Bank"
+            }
+          },
+          {
+            "id": "769d7073d87165b7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AI Engineering/Model Bank.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Model Bank"
+            }
+          },
+          {
+            "id": "533c4be98dfc7965",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "AI Engineering/AI Engineering by Orielly.md",
                 "mode": "source",
                 "source": false,
@@ -58,30 +106,6 @@
             }
           },
           {
-            "id": "533c4be98dfc7965",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AI Engineering/Industry needes in AI.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Industry needes in AI"
-            }
-          },
-          {
             "id": "0b04faf8573d27b9",
             "type": "leaf",
             "state": {
@@ -92,7 +116,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -271,12 +295,15 @@
       "3d-graph:3D Graph": false
     }
   },
-  "active": "fded4b9a6584efa3",
+  "active": "533c4be98dfc7965",
   "lastOpenFiles": [
-    "AI Engineering/Attention mechanism with transformers.png",
+    "AI Engineering/Model Bank.md",
     "AI Engineering/AI Engineering by Orielly.md",
-    "AI Engineering/Industry needes in AI.md",
+    "AI Engineering/Dataset Bank.md",
     "AI Engineering/AI Engineering.md",
+    "AI Engineering/Industry needes in AI.md",
+    "AI Engineering/How a Transformer thinks.md",
+    "AI Engineering/Attention mechanism with transformers.png",
     "AI Engineering/Benchmark for LMs.png",
     "Linux/man-documentation.md",
     "Linux/Linux.md",
@@ -312,8 +339,6 @@
     "Web Hosting/Nginx.md",
     "Networking Notes/Security Linux Networking.md",
     "Networking Notes/Networking Fundamentals.md",
-    "Networking Notes/Cisco Packet Tracer.md",
-    "Docker 2 0.md",
-    "Docker.md"
+    "Networking Notes/Cisco Packet Tracer.md"
   ]
 }

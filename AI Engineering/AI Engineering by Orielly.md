@@ -43,7 +43,15 @@ PROMPT ENGINEERING IS NOT TRAINING. (But: By using a different prompt engineerin
 * One of the most famous domain-specific models is perhaps DeepMind’s AlphaFold, trained on the sequences and 3D structures of around 100,000 known proteins.
 * More Medical Models: NVIDIA’s BioNeMo, Google’s Med-PaLM2.
 ## Modeling the model
-* Most dominant architecture for LMs is the 'transformer' arch based on attention mechanism. This helped processing multiple input tokens in parallel unlike RNN. But normal transformer architecture was also acting as a bottleneck.
+* Most dominant architecture for LMs is the 'transformer' (2017) arch based on attention mechanism. This helped processing multiple input tokens in parallel unlike RNN. But normal transformer architecture was also acting as a bottleneck.
 * The solution was attention mechanism. The attention mechanism computes how much attention to give an input token by performing a dot product between the query vector and its key vector. A high score means that model will use more of the page's during generation of the summary.
+
 ![[Attention mechanism with transformers.png]]
+
 * **Why is it hard to extend context length for transformer models?** : This is because each previous token has a key and value vector. The longer the sequence, the more key and value vectors need to be computed and stored.
+* To see more in-depth detail about how a transformer model works mathematically we see [[How a Transformer thinks]].
+* A few advancements have been made to traditional transformer model by introducing SSS (Structured State Spaces) and then moving onto H3, Mamba and Jamba. These use multiple techniques to outperform models having more parameters using these techniques.
+## Model Size
+* **How do we determine which Memory Size GPU needed to do inference using a model?**: The number of parameters helps us estimate the compute resources needed to train and run this model. For example, if a model has 7 billion parameters, and each parameter is stored using 2 bytes (16 bits), then we can calculate that the GPU memory needed to do inference using this model will be at least 14 billion bytes (14 GB).
+* Models are trained these days using datasets like: Llama 1: 1.4 trillion tokens, Llama 2: 2 trillion, Llama 3: 15 trillion (these are training tokens unlike model's own dataset tokens).
+* Assume that you have 256 H100s. If you can use them at their maximum capacity and make no training mistakes, it’d take you (3.14 × 1023) / (256 × 5.2 × 1018) = ~236 days, or approximately 7.8 months, to train GPT-3-175B. (this would cost around 4 million USD [Rs. 38,09,58,600]).
