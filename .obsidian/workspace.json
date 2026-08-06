@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -271,8 +271,9 @@
       "3d-graph:3D Graph": false
     }
   },
-  "active": "0b04faf8573d27b9",
+  "active": "fded4b9a6584efa3",
   "lastOpenFiles": [
+    "AI Engineering/Attention mechanism with transformers.png",
     "AI Engineering/AI Engineering by Orielly.md",
     "AI Engineering/Industry needes in AI.md",
     "AI Engineering/AI Engineering.md",

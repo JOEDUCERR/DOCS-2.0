@@ -36,7 +36,14 @@ PROMPT ENGINEERING IS NOT TRAINING. (But: By using a different prompt engineerin
 # Foundation Models
 
 * An extremely time-taking, costly and resource heavy task often done by professionals only who do not the secret sauce easily.
-## Training Data
+## Training Data + Real world Examples
 * Non Profit Organization created 'Common Crawl' by crawling websites on the Internet. Google provides a clean version of this called C4. Used by: GPT-3 and Gemini.
 * OpenAI used only the Reddit links that received at least three upvotes to train GPT-2.
 * For the MASSIVE dataset, the median token length in English is 7, but the median length in Hindi is 32, and in Burmese, it’s a whopping 72, which is ten times longer than in English.
+* One of the most famous domain-specific models is perhaps DeepMind’s AlphaFold, trained on the sequences and 3D structures of around 100,000 known proteins.
+* More Medical Models: NVIDIA’s BioNeMo, Google’s Med-PaLM2.
+## Modeling the model
+* Most dominant architecture for LMs is the 'transformer' arch based on attention mechanism. This helped processing multiple input tokens in parallel unlike RNN. But normal transformer architecture was also acting as a bottleneck.
+* The solution was attention mechanism. The attention mechanism computes how much attention to give an input token by performing a dot product between the query vector and its key vector. A high score means that model will use more of the page's during generation of the summary.
+![[Attention mechanism with transformers.png]]
+* **Why is it hard to extend context length for transformer models?** : This is because each previous token has a key and value vector. The longer the sequence, the more key and value vectors need to be computed and stored.
