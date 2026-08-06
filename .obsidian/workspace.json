@@ -34,38 +34,12 @@
             }
           },
           {
-            "id": "b9a75483db964720",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "GATE/Daily Study.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Daily Study"
-            }
-          },
-          {
             "id": "fded4b9a6584efa3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Systemd.md",
+                "file": "AI Engineering/AI Engineering by Orielly.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -80,11 +54,45 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Systemd"
+              "title": "AI Engineering by Orielly"
+            }
+          },
+          {
+            "id": "533c4be98dfc7965",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AI Engineering/Industry needes in AI.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Industry needes in AI"
+            }
+          },
+          {
+            "id": "0b04faf8573d27b9",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -263,13 +271,19 @@
       "3d-graph:3D Graph": false
     }
   },
-  "active": "fded4b9a6584efa3",
+  "active": "0b04faf8573d27b9",
   "lastOpenFiles": [
+    "AI Engineering/AI Engineering by Orielly.md",
+    "AI Engineering/Industry needes in AI.md",
+    "AI Engineering/AI Engineering.md",
+    "AI Engineering/Benchmark for LMs.png",
+    "Linux/man-documentation.md",
     "Linux/Linux.md",
     "Linux/Systemd.md",
-    "Linux",
-    "Plan.md",
+    "man-documentation.md",
     "GATE/Daily Study.md",
+    "Plan.md",
+    "Linux",
     "TaskNotes/Views/relationships.base",
     "TaskNotes/Views/pomodoro-stats.base",
     "Web Hosting/nginx.conf Image.png",
@@ -290,11 +304,8 @@
     "Untitled.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
-    "AI Engineering/AI Engineering by Orielly.md",
-    "AI Engineering/Benchmark for LMs.png",
     "AI Engineering/Multimodal model.png",
     "AI Engineering.md",
-    "AI Engineering/AI Engineering.md",
     "Asset-Tag-Project.md",
     "Web Hosting/Nginx Conf Deep Dive.md",
     "Web Hosting/Nginx.md",
@@ -302,10 +313,6 @@
     "Networking Notes/Networking Fundamentals.md",
     "Networking Notes/Cisco Packet Tracer.md",
     "Docker 2 0.md",
-    "Docker.md",
-    "AWS Commands.md",
-    "Arch Install.md",
-    "AI Web Dev.md",
-    "Agentic Prompt Engineering.md"
+    "Docker.md"
   ]
 }

@@ -22,7 +22,6 @@ Build, Don't Talk:
 	
 	
 	Today:
-	* Make Decision GATE / AI/ML.
 	* Make plan accordingly
 	* Clean room
 	* 476
