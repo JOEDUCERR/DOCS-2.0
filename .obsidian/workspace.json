@@ -58,33 +58,8 @@
               "icon": "lucide-file",
               "title": "Daily Study"
             }
-          },
-          {
-            "id": "fded4b9a6584efa3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux/Systemd.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Systemd"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -234,8 +209,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           }
         ],
@@ -255,18 +230,18 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false,
       "audio-recorder:Start/stop recording": false,
+      "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
       "obsidian-kanban:Create new board": false,
       "omnisearch:Omnisearch": false,
       "3d-graph:3D Graph": false
     }
   },
-  "active": "fded4b9a6584efa3",
+  "active": "5adc76ca57f8dbac",
   "lastOpenFiles": [
-    "Linux/Linux.md",
     "Linux/Systemd.md",
+    "Linux/Linux.md",
     "Linux",
     "Plan.md",
     "GATE/Daily Study.md",
