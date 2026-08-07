@@ -115,8 +115,7 @@
               "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -295,12 +294,12 @@
       "3d-graph:3D Graph": false
     }
   },
-  "active": "769d7073d87165b7",
+  "active": "5adc76ca57f8dbac",
   "lastOpenFiles": [
+    "AI Engineering/AI Engineering by Orielly.md",
     "Linux/man-documentation.md",
     "Linux/Systemd.md",
     "Linux/Linux.md",
-    "AI Engineering/AI Engineering by Orielly.md",
     "AI Engineering/Model Bank.md",
     "AI Engineering/Dataset Bank.md",
     "AI Engineering/AI Engineering.md",
