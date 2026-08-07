@@ -22,7 +22,4 @@ Build, Don't Talk:
 	
 	
 	Today:
-	* Make Decision GATE / AI/ML.
-	* Make plan accordingly
-	* Clean room
-	* 476
+	* Setup ollama with local models and make it useful
