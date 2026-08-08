@@ -57,4 +57,12 @@ PROMPT ENGINEERING IS NOT TRAINING. (But: By using a different prompt engineerin
 * Assume that you have 256 H100s. If you can use them at their maximum capacity and make no training mistakes, it’d take you (3.14 × 1023) / (256 × 5.2 × 1018) = ~236 days, or approximately 7.8 months, to train GPT-3-175B. (this would cost around 4 million USD [Rs. 38,09,58,600]).
 * Anthropic discovered in 2022 that Post-training a model too much leads to it not aligning with human preference and the model tends to be more politically and socially firm: it starts taking sides.
 * According to 'Chinchilla scaling law', number of training tokens should be **20 times the model size**. E.g. 3B model needs 60B training tokens.
-* Smaller models are trained multiple times so we can edit their hyperparameters like epoch, learning rate, batch size etc. But this is not possible for extremely large models as they require heavy resources for one training itself. The industry uses techniques like **Scaling extrapolation: comparing how hyperparameters from smaller models translate to larger ones**. And then transfer them. 
+* Smaller models are trained multiple times so we can edit their hyperparameters like epoch, learning rate, batch size etc. But this is not possible for extremely large models as they require heavy resources for one training itself. The industry uses techniques like **Scaling extrapolation: comparing how hyper parameters from smaller models translate to larger ones**. And then transfer them.
+* Main bottlenecks: Training data and electricity. There is a probability that there will be a lack of dataset in terms of size. Plus many websites now have changed their data terms to avoid scraping.
+## Post Training
+* Basically optimizing the model to generate responses that users prefer. (Basically understanding how to use the knowledge already learnt).
+* Many model builders use Reinforcement learning to avoid the issues.
+
+![[Shoggoth AI.png]]
+
+* 
