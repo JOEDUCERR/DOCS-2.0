@@ -60,9 +60,17 @@ PROMPT ENGINEERING IS NOT TRAINING. (But: By using a different prompt engineerin
 * Smaller models are trained multiple times so we can edit their hyperparameters like epoch, learning rate, batch size etc. But this is not possible for extremely large models as they require heavy resources for one training itself. The industry uses techniques like **Scaling extrapolation: comparing how hyper parameters from smaller models translate to larger ones**. And then transfer them.
 * Main bottlenecks: Training data and electricity. There is a probability that there will be a lack of dataset in terms of size. Plus many websites now have changed their data terms to avoid scraping.
 ## Post Training
+The difference is that unlike Pre training where the prediction of the model is trained, Post training optimizes the generated responses to match the user preference much better.
 * Basically optimizing the model to generate responses that users prefer. (Basically understanding how to use the knowledge already learnt).
 * Many model builders use Reinforcement learning to avoid the issues.
 
 ![[Shoggoth AI.png]]
 
+* A. **Supervised Finetuning** (Finetune model on high quality instruction data) and B. **Preference finetuning** (Typically done using Reinforcement learning from human feedback [RLHF]).
+
+![[Training workflow with Pre and Post methods.png]]
+
+* Basically, Self-Supervised training -> Supervised finetuning -> Preference finetuning [RLHF].
+* [[Post Training]] : Deep Dive.
+## Sampling
 * 
