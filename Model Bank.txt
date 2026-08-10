@@ -1,0 +1,36 @@
+(P.S. Combined memory here means RAM + VRAM.)
+
+Qwen3:8B : Suprisingly good for lightweight coding and reasoning tasks on a budget 6-8 GB GPU.
+
+Qwen3-coder-next:80B : with 3B active parameters per token (3.7%) built for agentic coding and requires at least 45GB vram or combined memory.
+
+[TO BE RELEASED IN AUG (try 3.7 till then)] Qwen3.8:27B : Runs on a machine with about 24 GB for average use (Q6_K Context - limited) and 55 GB for BF16 Precision. For the average user Q4_K_M (24GB system) is a mainstream sweet spot but leaves you wanting on hard reasoning and long agentic tasks.
+
+(For more on Qwen3.8:27B - https://www.alibabacloud.com/blog/what-it-actually-takes-to-run-qwen3-8-27b-locally_603428)
+
+Qwen3.6:35B : MoE model with only 3B active parameters per token and 250k token context window. Can run on 40 GB VRAM. or 24GB (RTX 3090/4090.36GB MAC) for Q_4 versions with 32 GB RAM. For high accuracy it needs 40 GB VRAM (2x RTX 3090/64GB MAC) and 64 GB of RAM to use Q_8. Also you could use Apple unified memory of 32 GB - 64 GB for Q4 - Q8. 80GB VRAM (Nvidia A100/H100) for enterprise level.
+
+Deepseek-V4-Flash-0731:284B : with 13B active parameters and 1M token context window this needs at least 110 GB combined memory (Quad 24 GB cards). For full precision it needs about 162GB memory.
+
+GLM-5.2:753B : Suitable for multi step SE workflows approaching close to models like Claude Opus 4.8 and requires at least 411 GB vram for a production standard work (preferrably 8 Ampere A100s).
+
+Kimi K3:2.8T : Buit for agentic coding with 1M token context window. 1.5TB Vram. Minimal boots require at least 640 GB memory.
+
+----------------
+
+(Note on multi GPU setups:
+ For multi-GPU setups, there are two main types of distributed processing, tensor parallel and pipeline parallelism.
+
+If inter-GPU communication speeds are low, tensor parallel can become more than 2x as slow. Additionally, if the GPUs have different VRAM capacities, it defaults to the lowest one across all cards. On the other hand, while pipeline parallelism doesn't suffer as much from communication latency, it processes sequentially, GPU utilization drops. It means one GPU sits idle while another is working.
+
+PCIe is very slow. )
+
+(Note on kv cache:
+A KV (Key-Value) cache is a memory optimization technique used in Transformer-based AI models (like Large Language Models) during text generation. By storing and reusing the key and value vectors computed for past tokens, the model avoids recalculating attention states from scratch for every new word, vastly accelerating inference speed.)
+
+(Note on MoE
+Mixture of Experts (MoE) is a machine learning design where a large neural network splits tasks among smaller sub-networks called "experts". A router or gating network decides which expert handles each piece of data. This makes models massive in total size but fast and cheap to run.
+)
+
+Note on llama
+Think of llama.cpp as the powerful, manual transmission engine, and Ollama as the automatic, daily-driver car wrapper built around it.
