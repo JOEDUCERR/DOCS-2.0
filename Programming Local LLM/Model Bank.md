@@ -85,12 +85,4 @@ is significantly easier than:
 
 Points:
 1. You can't beat claude. You can come close to it.
-2. Asked devs about use cases: Coding, reviewing PR, having whole project context
-
-Questions:
-
-1. What is the company willing to spend?
-2. Do you just want a smart code writing assistant or an agent like claude?
-3. How many devs would be simultaneously connected during peak hours?
-4. Are you fine with hosting it in cloud?
-5. Are you fine with a dumber quantized model?
+2. Asked devs about use cases: Coding, reviewing PR, having whole project context: Hence, we might need agentic capabilities.

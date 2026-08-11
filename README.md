@@ -22,3 +22,4 @@ A Hub of all my Documentation
 - [[Web Hosting]]
 - [[AI Engineering/AI Engineering|AI Engineering]]
 - [[Kanban Planner]]
+- [[Programming Local LLM]]
