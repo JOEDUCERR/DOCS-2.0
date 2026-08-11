@@ -22,4 +22,4 @@ Build, Don't Talk:
 	
 	
 	Today:
-	* Setup ollama with local models and make it useful
+	* Finish AI Engineering till chapter 3: Done till sampling.
