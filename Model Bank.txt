@@ -30,7 +30,67 @@ A KV (Key-Value) cache is a memory optimization technique used in Transformer-ba
 
 (Note on MoE
 Mixture of Experts (MoE) is a machine learning design where a large neural network splits tasks among smaller sub-networks called "experts". A router or gating network decides which expert handles each piece of data. This makes models massive in total size but fast and cheap to run.
+)	
+
+(Note on YaRN
+YaRN (Yet another RoPE extensioN) is a memory- and compute-efficient method used to extend the context window of transformer-based large language models that use Rotary Position Embeddings (RoPE). It rescales rotation frequencies unevenly and adjusts attention temperature, allowing models trained on short texts to handle massive lengths with minimal extra fine-tuning.
 )
 
 Note on llama
 Think of llama.cpp as the powerful, manual transmission engine, and Ollama as the automatic, daily-driver car wrapper built around it.
+
+--------------------------------------------------------------
+
+Goals:
+* Inhouse Local LLM
+* Shared to employees without losing compute. Sol: Using vLLM instead of Ollama or llama.cpp
+* Ready to commit compute upto: 128GB RAM, <unknown> GPU
+* Model :
+- Agentic abilities
+- MoE Mixture of Experts
+- Good Token Context length
+
+TODO:
+* Search for capable models
+- Qwen-coder-next:latest - 80B
+- deepseek-ai/DeepSeek-V4-Flash-0731 - 304B
+* Setup vLLM for multiple users at once.
+
+
+Claude response:
+* vLLM was a positive approach
+* Multi GPU setup needs tensor paralellism. PCIe is considered slow so lets see.
+* model size vs context length vs number of concurrent users, because all three compete for the same VRAM (weights + KV cache).
+* Suggests api-key support more as anyone on the LAN can hammer away the one GPU server
+* Suggest more VRAM for 15+ devs concurrently on a 32B class model. 2x
+
+vLLM config pieces you'll need regardless of model choice
+--tensor-parallel-size N — matches GPU count if you go multi-GPU.
+--max-model-len — cap this deliberately (e.g. 32768) rather than defaulting to max; it directly controls per-session KV cache reservation.
+--gpu-memory-utilization 0.90 (tune down if you're sharing the box with anything else).
+--tool-call-parser — must match your chosen model family (e.g. hermes or qwen depending on version) for agentic tool-calling to actually parse correctly. This is a common silent-failure point — worth testing explicitly before rollout, not assuming it works.
+--enable-auto-tool-choice alongside the parser flag.
+--api-key for basic access control, sitting behind nginx/Caddy for TLS + per-team logging on your LAN.
+
+* Context will be dependent solely on the amt if memory left after model is on the memory itself.
+* can be upgraded later.
+* 
+
+
+15 developers using ChatGPT-style chat
+
+is significantly easier than:
+
+15 developers running autonomous coding agents simultaneously.
+
+Points:
+1. You can't beat claude. You can come close to it.
+2. Asked devs about use cases: Coding, reviewing PR, having whole project context
+
+Questions:
+
+1. What is the company willing to spend?
+2. Do you just want a smart code writing assistant or an agent like claude?
+3. How many devs would be simultaneously connected during peak hours?
+4. Are you fine with hosting it in cloud?
+5. Are you fine with a dumber quantized model?
