@@ -23,10 +23,13 @@ feeding the GPUs
 * 4x GTX 1080 ti can run 30B models for this usecase if unified. But that usecase is slow.
 
 Features:
-* One AI Workstation for 5-10 Devs separate for each row of a total of 500 devs (Apple unified memory). Keeping a main server in the IT room for non power users (people who just want a replacement to claude cowork.).
-* If you think the system is unusable or too costly, we can host models on cloud need 1 day for R&D.
+* Alternative Idea: One AI Workstation for 5-10 Devs separate for each row of a total of 500 devs (Apple unified memory). Keeping a main server in the IT room for non power users (people who just want a replacement to claude cowork.).
 * Having dumber fallback models with continued context.
-* Openrouter
+* Keep the dumber model for non tech people.
+* Add company data as knowledgebase.
+* Add system prompts as security walls where the user cannot request critical data or make the model do unethical tasks.
+* Add router functionalities for having multiple models as options on same context.
+* Web Search implementation.
 
 ----------------------------------------------------------
 
