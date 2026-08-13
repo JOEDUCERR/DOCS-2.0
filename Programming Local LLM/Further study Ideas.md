@@ -85,3 +85,24 @@ Solution?
 ----------------------------------------------------------
 
 KV = sequence length X active users
+
+----------------------------------------------------------
+
+**Qwen3:8B as a starting point:** Yes, good choice. It's much lighter than a 13B (weights ~16GB at FP16, less than half at quantized), leaves real headroom for KV cache across multiple users, and is a capable, fairly recent model. Solid place to start before scaling up.
+
+**Finding a quantized version — you don't need to quantize it yourself:**
+
+- Easiest: `ollama pull qwen3:8b` — Ollama serves a pre-quantized GGUF (Q4_K_M) by default.
+- Or browse Hugging Face for pre-made GGUFs: search `Qwen3-8B GGUF` (e.g. `bartowski/Qwen3-8B-GGUF`, `unsloth/Qwen3-8B-GGUF`), pick a quant level (Q4_K_M is the usual sweet spot), then `ollama run hf.co/<repo>:<quant>`.
+- Only quantize yourself if you need a custom quant level: use `llama.cpp`'s `convert_hf_to_gguf.py` + `llama-quantize` tool.
+
+**On the vLLM/Pascal issue — ChatGPT is right.** I checked: vLLM officially supports GPUs with compute capability 7.0 and above, and the 1080 Ti is compute capability 6.1. vLLM doesn't officially work on the 1080 Ti — some users patch it for Volta, but Pascal patches are scarce and break with updates. Don't fight this.
+
+**What to use instead:** Ollama or llama.cpp directly — both are Pascal-native and this is the standard path for your hardware. llama.cpp implements its own efficient attention that does benefit Pascal, unlike Flash Attention 2 (Ampere-only).
+
+Setup outline:
+
+1. Install Ollama (or build llama.cpp with `-DGGML_CUDA=ON`).
+2. Pull/run `qwen3:8b` — it auto-splits across your 4 GPUs.
+3. For multi-user concurrency, set `OLLAMA_NUM_PARALLEL` (e.g. 4-7) and `OLLAMA_MAX_LOADED_MODELS=1` so requests batch instead of each spawning a new model instance.
+4. Test actual concurrent load before promising 7 users — Pascal's weak FP16 throughput means real tok/s under load matters more than VRAM math alone.
