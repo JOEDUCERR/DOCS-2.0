@@ -30,6 +30,20 @@ Features:
 * Add system prompts as security walls where the user cannot request critical data or make the model do unethical tasks.
 * Add router functionalities for having multiple models as options on same context.
 * Web Search implementation.
+* New Idea: Add 4 8B parameter models each on the 4 GPUs. For this we cannot work with only one ollama instance. We would need 4 separate and select each using CUDA_VISIBLE_DEVICES and serve each ollama instance on a different port number. To do this we need to give Open WebUI one server link (the load balancer link). And then we would connect all the ollama instances to this
+Issues:
+* Open WebUI's documentation confirms that the context includes the system prompt, entire conversation, attached files, tool definitions, and previous tool results.
+
+Options:
+* Status: FAILED**DeepSeek-Coder-V2-Lite (16B MoE):** A Mixture-of-Experts model requiring roughly 9GB of space; highly efficient for complex reasoning and syntax support across dozens of language
+|DeepSeek-Coder-V2-Lite-Base|16B|2.4B|128k|[🤗 HuggingFace](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Base)|
+|DeepSeek-Coder-V2-Lite-Instruct|16B|2.4B|128k|[🤗 HuggingFace](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct)|
+|DeepSeek-Coder-V2-Base|236B|21B|128k|[🤗 HuggingFace](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Base)|
+|DeepSeek-Coder-V2-Instruct|236B|21B|128k|[🤗 HuggingFace](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct)|
+
+* **Qwen3.6 27B / Qwen3-Coder 30B:** The gold standard if your hardware can stretch to a 24GB VRAM card or unified Mac memory, providing exceptional reliability and long context window.
+* **Qwen3-Coder-30B-A3B-Instruct** : this should work. and will keep Qw
+* need a bomb with cpu. need 3 casualties.
 
 ----------------------------------------------------------
 
@@ -109,3 +123,38 @@ Setup outline:
 2. Pull/run `qwen3:8b` — it auto-splits across your 4 GPUs.
 3. For multi-user concurrency, set `OLLAMA_NUM_PARALLEL` (e.g. 4-7) and `OLLAMA_MAX_LOADED_MODELS=1` so requests batch instead of each spawning a new model instance.
 4. Test actual concurrent load before promising 7 users — Pascal's weak FP16 throughput means real tok/s under load matters more than VRAM math alone.
+Fix:
+* disable Flash Attention
+
+-------------------------
+
+New config:
+Model: qwen3.6:35B-a3b
+Active parameters: 3B per token (Mixture of Experts)
+Size: 24 GB
+Model loading duration: 4.8s
+Total time model thought: 15.2s
+Time spent typing out the response: 5.6s
+
+Session prompt tokens: 26K
+session completion tokens: 2K (tokens the model generated)
+session total tokens used: 28K
+* Running multiple prompts without memory loss. (tested on 11 continuously and 1 after letting the model out of memory.)
+* Model retains memory.
+* Working on as agentic model on Open Computer.
+* AFTER EXPLICITLY INCREASING THE CTX LENGTH IN OLLAMA I AM ABLE TO EXTEND AGENTIC TASKS. (sudo systemctl edit ollama) and added the line that increases its ctx length to 65K.
+
+![[Pasted image 20260814221610.png]]
+
+preferred setting
+|Setting|Recommendation|
+|---|--:|
+|Model|`qwen3.6:35b-a3b`|
+|Context|**65,536**|
+|Max output|~8K–16K|
+|Thinking|ON|
+|Thinking preservation|ON if supported|
+|Flash attention|ON if supported|
+|KV cache quantization|Consider `q4_0` if VRAM becomes limiting|
+|GPU offload|**100% GPU preferred**|
+|Ollama|Latest version|
