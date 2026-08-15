@@ -73,4 +73,15 @@ The difference is that unlike Pre training where the prediction of the model is 
 * Basically, Self-Supervised training -> Supervised finetuning -> Preference finetuning [RLHF].
 * [[Post Training]] : Deep Dive.
 ## Sampling
-* 
+Process of constructing output of a model. Modifying it can make the outputs more creative or suitable for application or predictable.
+* For an LLM to generate the next token, the model first computes the probability distribution over all tokens.
+* Greedy Sampling: always picking the sample with the highest probability. (Works for classification but creates non creative outputs for LLMs).
+* Instead of greedy, LLMs compare the probability distribution over all tokens and will just just pick the highest blindly.
+* LLMs output a 'Logit' vector where each logit corresponds to one token of vocabulary. (logits can be converted to probabilistic values using a softmax layer)
+* **Temperature**: Higher temp reduces the probabilities of common tokens (more creative responses). **Temp adjust the logits**. On 0 temp, the model does Greedy Sampling.
+* To solve the issue where there is a large vocab size, instead of logits we use 'Logprobs' where logarithm is used as for a large vocab, probabilities can become really small. (OpenAI  uses Logprobs)
+* Most model providers provide little to no access to their logprobs as it becomes easier to replicate the model.
+* **Top-k**: Normal softmax requires two passes over all possible values and is computationally expensive. So after ligits computation, we pick only the top-k and perform softmax on those.
+* **Top-p**: Also known as nucleus sampling. Model sums the probabilities of most likely values in descending orders till sum reaches p. This allows for more dynamic selection of number of logits to be sampled. It helps target only the relevant values for each context.
+* This means that a 100-million-parameter model that uses a verifier can perform on par with a 3-billion-parameter model that doesn’t use a verifier. (thats how they train low parameter models to perform on par with larger models).
+* It can be said that allocating more compute to generate more outputs during inference can be more efficient than simply increasing model size.
