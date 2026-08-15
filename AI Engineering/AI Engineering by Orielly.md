@@ -85,3 +85,11 @@ Process of constructing output of a model. Modifying it can make the outputs mor
 * **Top-p**: Also known as nucleus sampling. Model sums the probabilities of most likely values in descending orders till sum reaches p. This allows for more dynamic selection of number of logits to be sampled. It helps target only the relevant values for each context.
 * This means that a 100-million-parameter model that uses a verifier can perform on par with a 3-billion-parameter model that doesn’t use a verifier. (thats how they train low parameter models to perform on par with larger models).
 * It can be said that allocating more compute to generate more outputs during inference can be more efficient than simply increasing model size.
+* A model is considered robust if it doesn’t dramatically change its outputs with small variations in the input.
+* Structured outputs: Firstly models must be able to do text-to-sql or text-to-regex to give output to specific values and SQL queries must be of correct syntax to work. They have to be of valid classes. Secondly, models must be able to generate content in formats which might be used by different apps like json format or .md file format. (models can only verify the output will be json, not the assurity that json code will be correct.)
+* You can guide a model to generate structured outputs at different layers of the AI stack: prompting, post-processing, test time compute, constrained sampling, and finetuning. The first three are more like bandages. They work best if the model is already pretty good at generating structured outputs and just needs a little nudge. For intensive treatment, you need constrained sampling and finetuning.
+* **Constrained Sampling**: Technique used for guiding generation of text toward certain constraints. In this sampling techniques only logits which meet the constraints are sampled.
+* ![[Filter out logits.png]]
+* In many cases constrained sampling needs explicitly hardcoded grammar to specify what is and is not allowed at each step (e.g. json grammar is different from yaml).
+* **Finetuning**: You can retrain the whole model end-to-end or part of the model like the classifier head (between embeddings and logits). The former requires more resources but promises better results.
+* "The way outputs are sampled in all the techniques mentioned here, it makes the model probabilistic."
