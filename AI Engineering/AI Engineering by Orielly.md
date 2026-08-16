@@ -102,5 +102,19 @@ This makes the model creative and fun to talk to, but can lead to inconsistencie
 * During SFT, models are trained to mimic responses written by labelers. If these responses use the knowledge that the labelers have but the model doesn’t have, we’re effectively teaching the model to hallucinate.
 * Hallucinations are way worse for models using both RLHF and SFT at once rather than just SFT.
 -----------------------------------
-# Evaluation
+## Evaluation
 * For an open ended model (unlike traditional ML models), it is way harder to evaluate them. We cannot just prompt and check each ground truth. Foundation models are **Black Boxes** as providers cannot expose details.
+* 2018 Glue (General Language Understanding Evaluation), 2019 Super-GLUE, Super-NatualInstructions 2022, MMLU 2020 all these Benchmarks have become obsolete as soon as a model achieves the perfect score. Now MMLU-Pro is used.
+* Evaluation lags behind in funding, attention and research.
+### Model Metrics
+* Entropy: The number of bits used in a token. e.g. if you want to describe a location within a square you need two values, hence in one token more bits. Hence its entropy would be 2. If only 1 bit us being used in a token its entropy will be 1. It also means how difficult it is to predict what comes next in a language.
+* Higher entropy languages are more difficult to predict.
+* **Cross Entropy**: Language model's cross entropy on a dataset measures how difficult it is for the language to predict what comes next in the dataset. 1. Training data's predictability is tested by training data's entropy. 2. How language model's distribution differs from true distribution of the data.
+* Language models are trained to minimize their cross entropy with respect to training data.
+* **Perplexity**: Exponential of entropy and cross entropy. It measures the amount of uncertainty it has when predicting the next token. Higher the uncertainty, higher the possible options for the next token.
+* More Structured data: Lower perplexity, Big vocab: Higher perplexity, Long context length: Lower perplexity.
+* Perplexity might not be a great proxy to evaluate models that have been trained by SFT or RLHF. As the models perplexity increases after post training, it becomes harder to predict the next token. [Quantization-A technique to reduce model's numerical precision and memory footprint also changes models perplexity].
+* cross entropy, perplexity, BPC, and BPB are variations of language models’ predictive accuracy measurements.
+* **PPL is also used to check the usefulness of a benchmark. If the PPL comes low during benchmarks, the benchmark itself becomes less trustworthy as the model might be performing well as it is being testing with data it was exactly trained on.**
+* PPL is the highest for unpredictable texts.
+* We also can check if a model is giving factual answers or not by Functional correctness (if the model does what it was intented to) and Similarity measurement against reference data (outputs are checked against ground truths).
