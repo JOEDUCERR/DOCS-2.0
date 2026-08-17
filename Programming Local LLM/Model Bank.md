@@ -1,5 +1,10 @@
 (P.S. Combined memory here means RAM + VRAM.)
 
+Qwen3.8:27B - 
+* Taking a long time to even start thinking on OpenWebUI
+* GPUs are not getting filled up
+* If qwen3.6 runs but 3.8 hangs, then this is ollama config on pascal gpu problem.
+
 Qwen3:8B : Suprisingly good for lightweight coding and reasoning tasks on a budget 6-8 GB GPU.
 
 Qwen3-coder-next:80B : with 3B active parameters per token (3.7%) built for agentic coding and requires at least 45GB vram or combined memory.
@@ -86,3 +91,66 @@ is significantly easier than:
 Points:
 1. You can't beat claude. You can come close to it.
 2. Asked devs about use cases: Coding, reviewing PR, having whole project context: Hence, we might need agentic capabilities.
+
+When using smaller 8B model, the responses are fast but it is unable to perform Agentic tasks and tool calling. Also limited in writing detailed code.
+
+When using the 35B parameter model, the model loads slow, but it is able to perform agentic tasks. 
+
+* Implement RAG
+* Add guardrails
+
+Now we have the actual root cause.
+
+This is **not primarily an OpenCptr problem and not primarily a 48K-context problem**.
+
+Your Ollama runner is **crashing/stalling during GPU discovery**.
+
+The decisive evidence is:
+
+ALSO
+
+We now know that at the time of the failure:
+
+llama-server = gone
+
+Ollama /api/ps = no models
+
+GPU memory = still allocated temporarily
+
+So this was an actual runner failure, not merely OpenCptr waiting.
+
+***** There is **no NVLink, PIX, or PXB path** between the GPUs.
+
+Why does a trivial request take ~2 minutes 19 seconds before completing?
+
+ALSOOOOOOOOOOOOOO
+
+So every time the inference engine needs to synchronize/interact between shards, you're paying the cost of PCIe communication.
+
+For a 35B MoE model this can still work, but it explains why:
+
+> "It fits in 44 GB"
+
+does **not** mean:
+
+> "It will run like a 35B model on one fast 44 GB GPU."
+
+*** BACKEND IS HEALTHY AT 32K CONTEXT LENGTH
+
+(On direct api test)
+- Model loading: **~0.5 s**
+- Prompt processing: **~0.5 s**
+- Generation: **~9.9 s**
+- Generation speed: **~14.6 tok/s**
+- Context: **32,768**
+- GPU offload: **97%**
+- Model resident: **28 GB**
+- Keep-alive: **Forever**
+
+# This also explains why 48K felt worse
+
+At 48K you gave the agent even more room to accumulate context.
+
+But the problem isn't that you **need** 48K.
+
+The problem is that OpenCptr is already consuming almost the entire **32K** window for a trivial request.
