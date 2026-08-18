@@ -3,3 +3,4 @@
 [[Local Artificial Intelligence for Programming.com]]
 [[Agentic]]
 [[Further study Ideas]]
+[[Claude Analysis]]
