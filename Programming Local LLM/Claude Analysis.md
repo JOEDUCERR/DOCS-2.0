@@ -28,7 +28,7 @@ Why not qwen3.8:27B?
 Bottom line: it's not too big for your VRAM, but dense 27B on 4x Pascal over PCIe is going to be slow at both load and prefill — likely slower than your 35B-A3B MoE, not faster, despite being "smaller." This model doesn't fix your speed problem; it's a different tradeoff, not a strict upgrade for your rig. I'd hold off on it until quants mature and stick with your llama.cpp tuning plan on the MoE model, or try the dense 14B-class idea I mentioned instead if you want to test dense-vs-MoE properly.
 
 Implementation:
-1. As soon as I changed the tool calling from Legacy to Native, Turned off Image generation capabilities. The model started THINKING fast. That works.
+1. Qwen3.6:35B: As soon as I changed the tool calling from Legacy to Native, Turned off Image generation capabilities. The model started THINKING fast. That works. **Verdict**: Good for basic QnA (kind of overkill), Fine speed in code generation responses, stalls in agentic.
 	1. First test was basic QnA and it passed with fast responses. Token usage Average: 5K.
 	2. Second test is website code generation (non agentic). I can observe slow code generation (Line by line, a little faster than a human coder).
 		1. 1st token: 15K(11+3), 3.3m
@@ -41,6 +41,18 @@ Implementation:
 		1. 1st token: 3.8K(3+0.1), 30s
 		2. 2nd token: 14K(14+0.1), 4m FAILED: "Can you remove all texts with emojis in the website. I do not want it to look vibe coded".
 		3. 3rd token: , Testing after prompting the agent to use grep instead of manual reading.
+2. Qwen3.8:27B: Same settings as qwen3.6. lets see. Model takes total of 5 minutes on first load. One second prompt it was way faster  in thinking, but responses are shown laggy, maybe a hardware limitation as model just came out. Large input token wastage is not happening yet. Also the model takes up 30GB space. MODEL IS DRAWING ALMOST FULL POWER FROM ALL GPUs. **Hence speed of response is totally based on power throttling/limitation.**
+	1. Basic QnA. Asked about networking
+		1. 1st: 5.7K(5.7+0.02), 5m
+		2. 2nd: 6.4K(5.7+0.6), 1.5m (wayy better + thoughtful responses [claude feel])
+		3. 3rd: 8K(2.4+1.6), 3.2m
+	2. Basic Code writing. Started thinking right away as model was already loaded.
+		1. 1st: 9K(5+3), 6m
+		2. 2nd: 12K(9+2), 6m
+		3. 3rd: 13K(11+2), 4.5m (Input context size is increasing)
+		4. 4th: 17K(13+3), 7m
+	3. RAG:
+		1. Working but slow af
 
 Further Claude Analysis:
 1. Line-by-line codegen speed is roughly what you'd expect from a 35B-A3B on Pascal without Flash Attention — not fast, but not the bug.
@@ -56,6 +68,7 @@ Review:
 3. Finetuned the model to responde much faster for a single user with minimal token usage.
 4. Large code generation is still slow but workable
 
+-------------------------------------------------------
 
 New Structure for Open Hands
 curl
