@@ -47,4 +47,31 @@ Further Claude Analysis:
 2. Full agentic work needs more than 32K ceiling which is acting as a constraint for now. We need to switch to llama.cpp to have more control.
 
 TODO:
-1. Trying a different agentic system first
+1. Trying a different agentic system first. Open Hands.
+	1. OpenHands runs agents that complete entire engineering tasks, taking actions across entire codebases, running tasks in parallel, and executing changes in real environments.
+
+Review:
+1. By EOD will have agentic framework setup for development work. Running automations all synced with GitHub codebases.
+2. Implemented RAG and knowledgebase.
+3. Finetuned the model to responde much faster for a single user with minimal token usage.
+4. Large code generation is still slow but workable
+
+
+New Structure for Open Hands
+curl
+ │
+ │ API key
+ ▼
+Nginx :11435
+ │
+ │ authenticated
+ ▼
+Ollama :11434
+ │
+ ▼
+Qwen
+
+How to run?
+Install openhands on pc using uv
+cd ~/projects
+openhands serve --mount-cwd (opens openhands on the project folder)
