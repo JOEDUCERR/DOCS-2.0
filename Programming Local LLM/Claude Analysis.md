@@ -34,3 +34,17 @@ Implementation:
 		1. 1st token: 15K(11+3), 3.3m
 		2. 2nd token: 13K(8+4), 6.1m
 		3. 3rd token: 16K(11+4), 4.4m
+		4. 4th Token: 17K(13+3), 3.5m
+	3. Testing RAG. Gave it my resume.
+		1. 1st token: 9K(6+2), 2.3m
+	4. Testing Agentic. Started thinking faster. It thinks multiple times due to its agentic nature.
+		1. 1st token: 3.8K(3+0.1), 30s
+		2. 2nd token: 14K(14+0.1), 4m FAILED: "Can you remove all texts with emojis in the website. I do not want it to look vibe coded".
+		3. 3rd token: , Testing after prompting the agent to use grep instead of manual reading.
+
+Further Claude Analysis:
+1. Line-by-line codegen speed is roughly what you'd expect from a 35B-A3B on Pascal without Flash Attention — not fast, but not the bug.
+2. Full agentic work needs more than 32K ceiling which is acting as a constraint for now. We need to switch to llama.cpp to have more control.
+
+TODO:
+1. Trying a different agentic system first
