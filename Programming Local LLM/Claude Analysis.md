@@ -54,6 +54,30 @@ Implementation:
 		4. 4th: 17K(13+3), 7m
 	3. RAG:
 		1. Working but slow af
+3. Qwen3-Coder-30b. It was an epic fail. No responses just "/////////////////"
+4. Mistral:7B. Good for basic knowledge and automating non tech tasks.
+	1. Basic QnA
+		1. 1st: 5K(5+0.2), 2.3m
+		2. 2nd: No Output
+		3. 3rd ad 4th outputs came averaging out to 6K tokens and 30s responses
+		4. 5th: 7K(6+0.4), 1.5m: Reloaded the model after emptying GPU. its fast alright.
+	2. Knowledgebase Test.
+		1. 1st: 7.8K(7+0.4), 11m: That's crazy.
+		2. 2nd: 8.2K(7+0.4), 15.5m: nahh
+5. Qwen3:8B
+	1. Basic QnA
+		1. 1st: 4.7K(4+0.1), 2.1m
+		2. 2nd: 5K(4+0.5), 48s
+		3. 3rd: Failure with "///////////////////////////////"
+	2. Basic QnA with 8K context and multiple changed
+		1. 1st: 4K(4+0.001), 1m
+		2. 2nd: 4.9K(4+0.1), 21s
+		3. 3rd: 4.9K(4+0.1), 20s
+	3. Basic Coding
+		1. 1st: 5.3K(4.7+0.5), 3.1m
+		2. 2nd: Cannot see token usage. Maybe it got locked by the limits set.
+		3. 3rd: Model responds with "????????????????????????"
+		4. 4th: again "??????????????????????"
 
 Further Claude Analysis:
 1. Line-by-line codegen speed is roughly what you'd expect from a 35B-A3B on Pascal without Flash Attention — not fast, but not the bug.
@@ -65,6 +89,7 @@ TODO:
 	2. Test Qwen3-Coder-30B-A3B with the settings that worked for qwen3.8 and 3.6. (Due to less active parameters per token and 17-20GB allocation only. Also due to its 250K context window which is expandable as well).
 		1. Also we cannot use dense models as well which would have been good options at lower parameter count, but they activate all parameters at once and without FA enabled, it makes things much slower. [Requires GPU upgradation].
 	3. Try out llama.cpp today.
+	4. Also test mistral and qwen3:8B.
 
 Review:
 1. By EOD will have agentic framework setup for development work. Running automations all synced with GitHub codebases.
@@ -72,6 +97,9 @@ Review:
 3. Finetuned the model to responds much faster for a single user with minimal token usage.
 4. Large code generation is still slow but workable
 5. Due to Fast Attention off (On Pascal GPUs), we cannot use Smaller but Denser models. We have to go for models with smaller active parameters per token.
+	1. **High memory traffic:** Standard attention reads and writes massive N × N matrices back and forth to High Bandwidth Memory (HBM).
+	2. **Quadratic slowdown:** Memory usage and time scale quadratically (O(N²)) as text length grows.
+	3. **Hardware bottleneck:** Modern graphics cards calculate math fast, but waiting on memory transfers slows them down.
 
 -------------------------------------------------------
 
