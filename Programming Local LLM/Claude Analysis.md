@@ -2,8 +2,8 @@ TODO:
 1. Try llama cpp and adjust parameters (settings which are hidden in Ollama):
 	- Confirm all gpus are detected.
 	- Do explicit tensor split accross 4 cards.
-2. Check open web uis tool calling mode (on legacy the context is self-inflating. every turn re-injects the full tool-description prompt and kills KV cache reuse)
-3. Try a Dense qwen3-coder:14b tuned model at Q4 (non MoE due to heavy overhead).
+2. Check open web uis tool calling mode (on legacy the context is self-inflating. every turn re-injects the full tool-description prompt and kills KV cache reuse): IT WORKS
+3. Try a Dense qwen3-coder:14b tuned model at Q4 (non MoE due to heavy overhead).: WE ARE AVOIDING DENSE MODELS DUE TO PARAMETER ACTIVATION OVERHEAD.
 
 LLama Cpp advantages:
 * llama cpp has much better multi gpu control
@@ -20,12 +20,13 @@ Stuff to customize in llama.cpp:
 6. GPU model split: --tensor-split (How the model is divided across 4 GPUs)
 
 Hardware Limitations:
-1. Fast Attention is off on Pascal GPUs. So KV cache is fp16 and not q4/q8 which requires FA. So KV cache becomes costly and 32K context eats VRAM fast. Increasing it also does not work as VRAM fills up with 18-20GB of Q4 MoE weights.
+1. Fast Attention is off on Pascal GPUs. **So KV cache is fp16 and not q4/q8 which requires FA. So KV cache becomes costly and 32K context eats VRAM fast.** Increasing it also does not work as VRAM fills up with 18-20GB of Q4 MoE weights.
 2. We cannot use OpenClaw as it is tuned for a much bigger and heftier agentic loop which our current hardware cannot bear. So, we skip OpenClaw and Hermes agent for now.
 3. M0E models front load is heavy for the 4 core CPU handling everything Non-GPU.
 
 Why not qwen3.8:27B?
-Bottom line: it's not too big for your VRAM, but dense 27B on 4x Pascal over PCIe is going to be slow at both load and prefill — likely slower than your 35B-A3B MoE, not faster, despite being "smaller." This model doesn't fix your speed problem; it's a different tradeoff, not a strict upgrade for your rig. I'd hold off on it until quants mature and stick with your llama.cpp tuning plan on the MoE model, or try the dense 14B-class idea I mentioned instead if you want to test dense-vs-MoE properly.
+Bottom line: it's not too big for your VRAM, but dense 27B on 4x Pascal over PCIe is going to be slow at both load and prefill — likely slower than your 35B-A3B MoE, not faster, despite being "smaller." This model doesn't fix your speed problem; it's a different tradeoff, not a strict upgrade for your rig. I'd hold off on it until quants mature and stick with your llama.cpp tuning plan on the MoE model, or try the dense 14B-class idea I mentioned instead if you want to test dense-vs-MoE properly. 
+**Update**: Finally got it to work but due to its dense nature and all params being active at once, it lags heavily on basic code generation tasks.
 
 Implementation:
 1. Qwen3.6:35B: As soon as I changed the tool calling from Legacy to Native, Turned off Image generation capabilities. The model started THINKING fast. That works. **Verdict**: Good for basic QnA (kind of overkill), Fine speed in code generation responses, stalls in agentic.
@@ -60,13 +61,17 @@ Further Claude Analysis:
 
 TODO:
 1. Trying a different agentic system first. Open Hands.
-	1. OpenHands runs agents that complete entire engineering tasks, taking actions across entire codebases, running tasks in parallel, and executing changes in real environments.
+	1. OpenHands runs agents that complete entire engineering tasks, taking actions across entire codebases, running tasks in parallel, and executing changes in real environments.: Stuck in implementation
+	2. Test Qwen3-Coder-30B-A3B with the settings that worked for qwen3.8 and 3.6. (Due to less active parameters per token and 17-20GB allocation only. Also due to its 250K context window which is expandable as well).
+		1. Also we cannot use dense models as well which would have been good options at lower parameter count, but they activate all parameters at once and without FA enabled, it makes things much slower. [Requires GPU upgradation].
+	3. Try out llama.cpp today.
 
 Review:
 1. By EOD will have agentic framework setup for development work. Running automations all synced with GitHub codebases.
 2. Implemented RAG and knowledgebase.
-3. Finetuned the model to responde much faster for a single user with minimal token usage.
+3. Finetuned the model to responds much faster for a single user with minimal token usage.
 4. Large code generation is still slow but workable
+5. Due to Fast Attention off (On Pascal GPUs), we cannot use Smaller but Denser models. We have to go for models with smaller active parameters per token.
 
 -------------------------------------------------------
 
