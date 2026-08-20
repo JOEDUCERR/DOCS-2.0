@@ -4,3 +4,5 @@
 [[Agentic]]
 [[Further study Ideas]]
 [[Claude Analysis]]
+[[Daily Progress]]
+[[Implementation]]

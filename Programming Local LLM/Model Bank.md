@@ -17,11 +17,27 @@ Specs:
 * Q4_K_M quantization
 * Size: 30GB
 Observation:
+* **Verdict**: Good for basic well thought responses but extremely resource hogging.
 * Laggy responses (probably due to old hardware)
 * Token efficient in response.
 * All parameters are active so stalls in agentic
 * Draws enormous amounts of power from GPUs.
-
+### Qwen3:8B
+Specs:
+* 8.19B parameters
+* Q4_K_M quantization
+* 32 attention heads
+* 40K Context length
+Observation:
+* **Verdict**: Good for basic responses with thinking off but needs more optimization.
+* Good for basic QnA with minimal context length
+* Needs extreme optimization as it is loaded onto one GPU while others are idle. (llama.cpp)
+### Qwen3.6:27B
+Specs:
+* 27.8B parameters
+* Q4 quantization
+* 24 attention heads
+* 250K context length
 --------------------------------------
 (P.S. Combined memory here means RAM + VRAM.)
 
