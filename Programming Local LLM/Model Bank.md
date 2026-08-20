@@ -1,3 +1,28 @@
+### Qwen3.6:35B:
+Specs:
+* 3B active parameters
+* 35B parameters
+* Q4_K_M quantization
+* MoE Mixture of Experts
+* Self Learning (Preserved thinking / Cache)
+* Size: 24GB
+Observation:
+* **Verdict**: Good for basic QnA (kind of overkill)
+* Fine speed in code generation responses and RAG
+* Stalls in agentic.
+### Qwen3.8:27B
+Specs:
+* 27b parameters
+* 250K context length
+* Q4_K_M quantization
+* Size: 30GB
+Observation:
+* Laggy responses (probably due to old hardware)
+* Token efficient in response.
+* All parameters are active so stalls in agentic
+* Draws enormous amounts of power from GPUs.
+
+--------------------------------------
 (P.S. Combined memory here means RAM + VRAM.)
 
 Qwen3.8:27B - 
