@@ -1,8 +1,8 @@
 1. Try llama cpp and adjust parameters (settings which are hidden in Ollama):
-	- Confirm all gpus are detected.
-	- Do explicit tensor split accross 4 cards.
+	- Confirm all gpus are detected.: Done
+	- Do explicit tensor split accross 4 cards.: Todo today
 2. Check open web uis tool calling mode (on legacy the context is self-inflating. every turn re-injects the full tool-description prompt and kills KV cache reuse): IT WORKS
-3. Try a Dense qwen3-coder:14b tuned model at Q4 (non MoE due to heavy overhead).: WE ARE AVOIDING DENSE MODELS DUE TO PARAMETER ACTIVATION OVERHEAD.
+3. Try a Dense qwen3-coder:14b tuned model at Q4 (non MoE due to heavy overhead).: NO. WE ARE AVOIDING DENSE MODELS DUE TO PARAMETER ACTIVATION OVERHEAD.
 -------------------------------------------
 1. TODO:
 2. Trying a different agentic system first. Open Hands.
