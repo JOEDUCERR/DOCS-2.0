@@ -1,3 +1,8 @@
+
+![[Final Architecture.png]]
+
+-----------------------------------------
+
 https://claude.ai/share/28c1abda-e433-4b7c-b80a-a9fffd69fddb (for reference)
 sudo systemctl daemon-reload sudo systemctl enable --now llama-27b llama-8b sudo systemctl status llama-27b llama-8b
 
