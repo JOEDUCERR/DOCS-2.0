@@ -1,5 +1,27 @@
-
 ![[Final Architecture.png]]
+
+## Old LAN config
+```
+22/tcp                     ALLOW       Anywhere                  
+11434                      ALLOW       Anywhere                  
+80                         ALLOW       Anywhere                  
+8000/tcp                   ALLOW       Anywhere                  
+3389/tcp                   ALLOW       Anywhere                  
+9000                       ALLOW       Anywhere                  
+4000                       ALLOW       Anywhere                  
+443/tcp                    ALLOW       90.90.91.198              
+8001                       DENY        Anywhere                  
+8000                       DENY        Anywhere                  
+22/tcp (v6)                ALLOW       Anywhere (v6)             
+11434 (v6)                 ALLOW       Anywhere (v6)             
+80 (v6)                    ALLOW       Anywhere (v6)             
+8000/tcp (v6)              ALLOW       Anywhere (v6)             
+3389/tcp (v6)              ALLOW       Anywhere (v6)             
+9000 (v6)                  ALLOW       Anywhere (v6)             
+4000 (v6)                  ALLOW       Anywhere (v6)             
+8001 (v6)                  DENY        Anywhere (v6)             
+8000 (v6)                  DENY        Anywhere (v6)  
+```
 
 -----------------------------------------
 

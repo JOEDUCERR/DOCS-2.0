@@ -1,3 +1,14 @@
+Main drawback:
+There’s no getting around it: Pascal is old news, the toolkits and drivers that support it have been deprecated and replaced. There are technologies being built around hardware (Tensor cores) that Pascal doesn’t even have: [flash attention](https://github.com/dao-ailab/flash-attention). Llama.cpp supports flash attention on Pascal architecture but it's a second-class citizen.
+
+Flash Attention is built around [MMA/WMMA](https://forums.developer.nvidia.com/t/wmma-what-does-warp-matrix-operations-mean/229732) instructions, which are only expressed through a Tensor Core. Llama.cpp will fall back to pathways that work on Pascal, but in most cases, performance actually drops when flash attention is enabled, or it just doesn’t work.  
+
+The GTX 1080 Ti only supports up to CUDA 12.x and [Compute Capability 6.0/6.1](https://en.wikipedia.org/wiki/CUDA#Version_features_and_specifications). In April this year, PyTorch (a popular Python framework) will introduce [CUDA 13.2 and deprecate CUDA 12.8](https://dev-discuss.pytorch.org/t/introducing-cuda-13-2-and-deprecating-cuda-12-8-release-2-12/3337). As time marches on, Pascal support will only get worse.
+
+![[GTX 1080 ti comparison.png]]
+
+---------------------------------------------------------------
+
 TODO:
 1. Try llama cpp and adjust parameters (settings which are hidden in Ollama):
 	- Confirm all gpus are detected.

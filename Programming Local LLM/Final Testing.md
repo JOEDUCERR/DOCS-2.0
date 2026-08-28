@@ -244,3 +244,64 @@ data: [DONE]
 ```
 
 ----------------------------------------------------
+# Testing creating large projects with 27B
+
+```
+CUDA_VISIBLE_DEVICES=0,1,2 \
+/home/techlead/Documents/llama.cpp/build/bin/llama-server \
+-m /home/techlead/.cache/huggingface/hub/models--ggml-org--Qwen3.8-27B-GGUF/snapshots/0669b98607d47046c7c2b3f801011d54a08cfccf/Qwen3.8-27B-Q4_K_M.gguf \
+--ctx-size 70000 \
+--gpu-layers all \
+--split-mode layer \
+--flash-attn on \
+--cache-type-k q4_0 \
+--cache-type-v q4_0 \
+--batch-size 2048 \
+--ubatch-size 512 \
+--threads 4 \
+--threads-batch 4 \
+--reasoning-budget 1024 \
+--jinja \
+--tools all \
+--alias qwen3.8-27b \
+--host 0.0.0.0 \
+--port 8000
+```
+
+Prompt 1:
+Create one single HTML page "Voxelcraft" with Three.js (CDN) with hero section that feels like small Minecraft.
+
+- Generate terrain made of colored cubes (gress, stone, water)
+- Make it looks impressive
+- Output everything in one file, no external assets except Three.js
+- Smooth 60 fps performance. Clean modern code.
+
+Hiccup: Stopped due to lack of image/video input. adding --mmproj
+
+```
+CUDA_VISIBLE_DEVICES=0,1,2 \
+/home/techlead/Documents/llama.cpp/build/bin/llama-server \
+-m /home/techlead/.cache/huggingface/hub/models--ggml-org--Qwen3.8-27B-GGUF/snapshots/0669b98607d47046c7c2b3f801011d54a08cfccf/Qwen3.8-27B-Q4_K_M.gguf \
+--mmproj /home/techlead/.cache/huggingface/hub/models--ggml-org--Qwen3.8-27B-GGUF/snapshots/0669b98607d47046c7c2b3f801011d54a08cfccf/mmproj-Qwen3.8-27B-Q8_0.gguf \
+--ctx-size 70000 \
+--gpu-layers all \
+--split-mode layer \
+--flash-attn on \
+--cache-type-k q4_0 \
+--cache-type-v q4_0 \
+--batch-size 2048 \
+--ubatch-size 512 \
+--threads 4 \
+--reasoning-budget 1024 \
+--jinja \
+--tools all \
+--alias qwen3.8-27b \
+--host 0.0.0.0 \
+--port 8000
+```
+
+* It runs!!!!!
+* run: joeducer@techlead-H81M-S:~/Documents/voxelcraft-src/voxelcraft/dist$ ./Voxelcraft-1.0.0-linux-x86_64.AppImage --no-sandbox
+
+![[Voxelcraft Preview.png]]
+

@@ -1,1 +1,0 @@
-* Trying model on ollama first.
