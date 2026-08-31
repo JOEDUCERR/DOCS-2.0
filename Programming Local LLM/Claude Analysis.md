@@ -1,3 +1,5 @@
+387
+
 Main drawback:
 There’s no getting around it: Pascal is old news, the toolkits and drivers that support it have been deprecated and replaced. There are technologies being built around hardware (Tensor cores) that Pascal doesn’t even have: [flash attention](https://github.com/dao-ailab/flash-attention). Llama.cpp supports flash attention on Pascal architecture but it's a second-class citizen.
 
