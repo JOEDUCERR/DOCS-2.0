@@ -47,3 +47,7 @@ location / {
 There are 2 types of ways Nginx does reverse proxy:
 1. Least Connections: Sends requests to server with the least connections.
 2. Round Robin: Sends requests in a distributed cyclic manner.
+
+------------------------------------------------------
+### Practical
+[[Nginx Deep Dive Practical]]
