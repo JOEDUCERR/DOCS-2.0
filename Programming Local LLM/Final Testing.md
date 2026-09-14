@@ -28,6 +28,10 @@ CUDA_VISIBLE_DEVICES=0,1,2 \
     --host 0.0.0.0 \
     --port 8000
 ```
+## More optimized 27B
+```
+CUDA_VISIBLE_DEVICES=0,1,2 /home/techlead/Documents/llama.cpp/build/bin/llama-server -m /home/techlead/.cache/huggingface/hub/models--ggml-org--Qwen3.8-27B-GGUF/snapshots/0669b98607d47046c7c2b3f801011d54a08cfccf/Qwen3.8-27B-Q4_K_M.gguf --mmproj /home/techlead/.cache/huggingface/hub/models--ggml-org--Qwen3.8-27B-GGUF/snapshots/0669b98607d47046c7c2b3f801011d54a08cfccf/mmproj-Qwen3.8-27B-Q8_0.gguf --ctx-size 70000 --gpu-layers all --split-mode layer --flash-attn on --cache-type-k q4_0 --cache-type-v q4_0 --batch-size 2048 --ubatch-size 512 --threads 4 --reasoning-budget 1024 --jinja --tools all --alias qwen3.8-27b --host 0.0.0.0 --port 8000
+```
 ### Starting the server for 8B
 CUDA_VISIBLE_DEVICES=3 \
 /home/techlead/Documents/llama.cpp/build/bin/llama-server \
