@@ -75,6 +75,7 @@ server { listen 80; listen 443 ssl; server_name example.com; # Redirect HTTP to 
 
 * Command used to redirect HTTP to HTTPS: "return 301 https://$host$request_uri;" (used in the server block listening to port 80 and 443 both)
 ### Let's Encrypt command for Reverse Proxy role
+
 * Needs different certificate for each domain.
 * sudo certbot --nginx -d app1.example.com -d www.app1.example.com
 * sudo certbot --nginx -d app2.example.com -d www.app2.example.com
@@ -101,4 +102,12 @@ server { listen 80; listen 443 ssl; server_name example.com; # Redirect HTTP to 
 * You may also enable HSTS (HTTP Strict Transport Security)
 * OCSP (Online Certificate Status Protocol) used to check revocation status of a certificate in real time. (Basically check everytime a client connects and if the cert is invalid or revoked, the connection is terminated).
 * **OCSP stapling** is a technique where the server includes the OCSP response directly in the TLS handshake, eliminating the need for the client to query an external OCSP server. (This is used in high traffic sites or production environments).
-* 
+------------------------------------------------------
+
+# The working setup
+(Proper workflow)
+
+[[Nginx Workflow (Proper setup)]]
+
+------------------------------------------------------
+
