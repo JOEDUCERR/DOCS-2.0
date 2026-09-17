@@ -23,3 +23,5 @@ A Hub of all my Documentation
 - [[AI Engineering/AI Engineering|AI Engineering]]
 - [[Kanban Planner]]
 - [[Programming Local LLM]]
+- [[GATE]]
+- [[Linux]]
