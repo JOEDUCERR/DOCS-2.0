@@ -25,3 +25,4 @@ A Hub of all my Documentation
 - [[Programming Local LLM]]
 - [[GATE]]
 - [[Linux]]
+- [[Monitoring]]
