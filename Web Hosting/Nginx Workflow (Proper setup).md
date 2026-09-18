@@ -35,5 +35,3 @@
 	1. HTTP/3 Support
 	2. WebSockets
 	3. Load Balancing
-
-[[Nginx Workflow project]]
