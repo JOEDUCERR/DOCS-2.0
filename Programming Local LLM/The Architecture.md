@@ -1,4 +1,4 @@
-![[Final Architecture.png]]
+![[Programming Local LLM/Final Architecture.png]]
 
 ## Old LAN config
 ```
