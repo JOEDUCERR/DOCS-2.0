@@ -28,3 +28,4 @@ A Hub of all my Documentation
 - [[Monitoring]]
 - [[CineVault]]
 - [[Robotics]]
+- [[Mail Automation]]
