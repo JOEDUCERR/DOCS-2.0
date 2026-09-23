@@ -1,2 +1,5 @@
 [[Systemd]]
 [[man-documentation]]
+[[Linux Deep Dive]]
+[[Arch Install]]
+[[Mail Automation]]
