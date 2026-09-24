@@ -1,5 +1,6 @@
 A Hub of all my Documentation 
-- [[Active Directory]]
+
+![Knowledge Graph](KnowledgeGraph.png)
 - [[AI Web Dev]]
 - [[Arch Install]]
 - [[GitHub commands]]
