@@ -1,3 +1,5 @@
+https://linuxupskillchallenge.org/
+
 Day 1:
 * ssh (username)@(ip) -> password
 * Get info about server:
