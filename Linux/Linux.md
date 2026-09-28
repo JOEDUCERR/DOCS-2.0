@@ -3,3 +3,4 @@
 [[Linux Deep Dive]]
 [[Arch Install]]
 [[Mail Automation]]
+[[LinuxUpskillChallenge]]
