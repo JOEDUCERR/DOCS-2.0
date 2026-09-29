@@ -46,4 +46,19 @@ Day 8:
 * "less (file location)" is used to see the contents of the file in a scroll able manner.
 * "|" is a pipe symbol used to take output of one command and pipe it into another.
 Day 9:
-* 
+* Show which ports are open on which interfaces: sudo ss -ltp
+* use "nmap (ip)" to scan open ports on any ip.
+* Use ufw to enable to disable ports (uncomplicated firewall).
+* You can also try reconfiguring services to non standard ports.
+* ss commands:
+	* ss : listing all connections
+	* ss -a : all listening and non listening ports
+	* ss -l : only listening sockets
+	* ss -t : all tcp connections
+	* ss -ua : all UDP connections
+	* ss -lu : all listening UDP
+	* ss -p : show PID of sockets
+	* ss -s : show summary
+	* ss -4 : ipv4 (6 for ipv6)
+* https://danielmiessler.com/blog/no-moving-your-ssh-port-isnt-security-by-obscurity : Why changing your SSH port number could be useful after all.
+* **Port knocking** is a stealth method to externally open ports that, by default, the firewall keeps closed. It works by requiring connection attempts to a series of predefined closed ports. With a simple port knocking method, when the correct sequence of port "knocks" (connection attempts) is received, the firewall opens certain port(s) to allow a connection. 
