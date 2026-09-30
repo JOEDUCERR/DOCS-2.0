@@ -1,4 +1,5 @@
 Further study + Ideas
+14.194.14.90
 
 * Stuff that fills the RAM:
 model weights
