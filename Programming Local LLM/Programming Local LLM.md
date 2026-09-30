@@ -12,3 +12,4 @@
 [[In House Local LLM Infrastructure]]
 [[Llama.cpp]]
 [[Open Terminal]]
+[[Updating OpenWebUI]]
