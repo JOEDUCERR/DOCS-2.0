@@ -27,3 +27,4 @@ A Hub of all my Documentation
 - [[Backend]]
 - [[Asset-Tag-Project]]
 - [[Robotics]]
+- [[Redis]]
