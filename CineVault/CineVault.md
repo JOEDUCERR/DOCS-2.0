@@ -1,3 +1,5 @@
 [[Main Application Building]]
 [[Nginx Project (CV + Practice)]]
 [[Final Project]]
+[[AWS hosting architecture.png]]
+[[AWS hosting architecture 2.png]]

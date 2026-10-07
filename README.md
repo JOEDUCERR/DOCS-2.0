@@ -25,6 +25,7 @@ A Hub of all my Documentation
 - [[Asset-Tag-Project]]
 - [[AWS]]
 - [[Backend]]
-- [[Asset-Tag-Project]]
+- [[Asset Tag Project]]
 - [[Robotics]]
 - [[Redis]]
+- [[CodeSoft]]
