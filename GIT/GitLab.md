@@ -27,3 +27,4 @@ docker run --detach
     # Get initial root password (valid for 24 hrs)
     docker exec -it gitlab cat /etc/gitlab/initial_root_password
 ```
+[[GitLab Local Hosting]]
