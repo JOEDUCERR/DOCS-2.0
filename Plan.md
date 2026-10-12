@@ -1,5 +1,2 @@
-Plan:
-
-Finish one before moving to the next.
-* CodeSoft
-* 
+Done:
+* Docker Basics
