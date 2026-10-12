@@ -6,7 +6,6 @@ A Hub of all my Documentation
 - [[GitHub commands]]
 - [[Git 1]]
 - [[Java for IPA]]
-- [[ollama_docker_setup]]
 - [[Plan]]
 - [[Ubuntu_Hyperland_Simple]]
 - [[Networking Notes]]
@@ -29,3 +28,5 @@ A Hub of all my Documentation
 - [[Robotics]]
 - [[Redis]]
 - [[CodeSoft]]
+- [[Fuel Widget Project]]
+- [[Android Dev]]
