@@ -79,3 +79,7 @@ docker volume inspect pg-lab-data
 ```
 
 [[Docker Network Practical]]
+
+## Troubleshooting Examples in Docker
+
+![[Troubleshooting Example Docker.png]]
