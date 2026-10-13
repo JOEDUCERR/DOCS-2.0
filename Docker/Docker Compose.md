@@ -2,8 +2,6 @@
 category: DevOps
 status: reviewing
 ---
-
-
 Docker Compose
 
 * service: computing resource that can be scaled or replace independently from other components and are backed by a set of containers.

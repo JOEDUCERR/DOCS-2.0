@@ -1,12 +1,9 @@
 A Hub of all my Documentation 
 
 ![Knowledge Graph](KnowledgeGraph.png)
-- [[AI Web Dev]]
-- [[Arch Install]]
 - [[GitHub commands]]
 - [[Git 1]]
 - [[Java for IPA]]
-- [[ollama_docker_setup]]
 - [[Plan]]
 - [[Ubuntu_Hyperland_Simple]]
 - [[Networking Notes]]
@@ -19,7 +16,6 @@ A Hub of all my Documentation
 - [[Monitoring]]
 - [[CineVault]]
 - [[Robotics]]
-- [[Mail Automation]]
 - [[AWS]]
 - [[Docker]]
 - [[Asset-Tag-Project]]
@@ -29,3 +25,5 @@ A Hub of all my Documentation
 - [[Robotics]]
 - [[Redis]]
 - [[CodeSoft]]
+- [[Fuel Widget Project]]
+- [[Android Dev]]

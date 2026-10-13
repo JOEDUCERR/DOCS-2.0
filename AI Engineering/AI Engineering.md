@@ -4,3 +4,4 @@
 [[ollama_docker_setup]]
 [[AI Intelligence VS Costpertask.png]]
 [[Dataset Bank]]
+[[AI Web Dev]]
