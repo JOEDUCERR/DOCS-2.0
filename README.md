@@ -1,8 +1,6 @@
 A Hub of all my Documentation 
 
 ![Knowledge Graph](KnowledgeGraph.png)
-- [[AI Web Dev]]
-- [[Arch Install]]
 - [[GitHub commands]]
 - [[Git 1]]
 - [[Java for IPA]]
@@ -18,7 +16,6 @@ A Hub of all my Documentation
 - [[Monitoring]]
 - [[CineVault]]
 - [[Robotics]]
-- [[Mail Automation]]
 - [[AWS]]
 - [[Docker]]
 - [[Asset-Tag-Project]]

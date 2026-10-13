@@ -37,4 +37,45 @@ docker run -d \
   -e POSTGRES_DB=lab \
   -v pg-lab-data:/var/lib/postgresql/data \
   postgres:16
+  
+docker logs -f pg-lab
+
+docker exec -it pg-lab \
+  psql -U postgres -d lab
 ```
+
+```
+CREATE TABLE docker_test (
+    id SERIAL PRIMARY KEY,
+    message TEXT
+);
+
+INSERT INTO docker_test (message)
+VALUES ('My first persistent Docker database');
+
+SELECT * FROM docker_test;
+
+\q
+```
+
+```
+# Removing the container
+docker stop pg-lab
+docker rm pg-lab
+```
+
+```
+# Recreate it using same named volume
+docker run -d \
+  --name pg-lab \
+  -e POSTGRES_PASSWORD=labpass \
+  -e POSTGRES_DB=lab \
+  -v pg-lab-data:/var/lib/postgresql/data \
+  postgres:16
+  
+# Verify volume
+docker volume ls
+docker volume inspect pg-lab-data
+```
+
+[[Docker Network Practical]]
