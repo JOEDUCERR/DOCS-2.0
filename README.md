@@ -27,3 +27,5 @@ A Hub of all my Documentation
 - [[CodeSoft]]
 - [[Fuel Widget Project]]
 - [[Android Dev]]
+- [[DevOps]]
+- [[Local LLM Training]]
