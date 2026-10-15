@@ -309,3 +309,17 @@ CUDA_VISIBLE_DEVICES=0,1,2 \
 
 ![[Voxelcraft Preview.png]]
 
+----------------------------------------------------
+## Opencode
+1. Qwen3:8B
+```
+CUDA_VISIBLE_DEVICES=3 \
+/home/techlead/Documents/llama.cpp/build/bin/llama-server \
+  -m /home/techlead/.cache/huggingface/hub/models--Qwen--Qwen3-8B-GGUF/snapshots/7c41481f57cb95916b40956ab2f0b139b296d974/Qwen3-8B-Q4_K_M.gguf \
+  --ctx-size 16384 \
+  --reasoning-budget 4096 \
+  --jinja \
+  --alias qwen3-8b \
+  --host 0.0.0.0 \
+  --port 8001
+```
