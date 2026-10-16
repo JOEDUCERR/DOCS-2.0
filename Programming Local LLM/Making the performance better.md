@@ -37,3 +37,22 @@ Two smaller things:
 - Add `-ngl 99` explicitly to the 8B command rather than relying on the default.
 
 Make one change at a time and compare the steady-state `tg` figure, since a changed variable makes the numbers hard to read otherwise. If you paste the llama-bench results, I can help you interpret them.
+
+---------
+
+# The Outcome
+* As soon as the settings were changed, the model started hallucinating. "//////////////". Figured it might be a glitch. Restarting did not help.
+* **Glitch started after "sudo cpupower frequency-set -g performance" && "--threads 2"**.
+* Moved onto Qwen 3:8B.
+* 8B gave 40 t/s unoptimized.
+## Importance of CPU in AI Server
+* Orchestrator: loading, parsing, tokenization, batching
+	* This is why first load takes 2 minutes+ for larger models.
+	* Important during KV caching.
+	* If your CPU can’t keep pace, GPUs sit idle, wasting power and compute cycles. The key to AI efficiency isn’t just more GPUs – it’s the right balance between GPU and CPU.
+### Intel® Core™ i7-7700 Processor
+* 4 C 8T
+* Bus Speed: 8GT
+### Min Req
+* 6C 12T
+* Bus speed same
