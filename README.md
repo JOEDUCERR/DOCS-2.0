@@ -28,4 +28,4 @@ A Hub of all my Documentation
 - [[Fuel Widget Project]]
 - [[Android Dev]]
 - [[DevOps]]
-- [[Local LLM Training]]
+- [[Programming Mohali/Programming Mohali|Programming Mohali]]
