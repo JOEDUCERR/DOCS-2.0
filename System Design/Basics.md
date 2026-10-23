@@ -25,3 +25,25 @@ https://notebooklm.link.google/a2B7hz5DZ8x9
 * **Storage Engines:**
 	* **B-Trees (e.g., PostgreSQL, MySQL):** Update pages directly in-place. They are heavily optimized for fast reads, point lookups, and range queries, but suffer from write amplification under heavy random writes.
 	* **LSM-Trees (e.g., Cassandra, RocksDB):** Buffer writes in memory (MemTable) and sequentially append them to immutable disk files (SSTables). They convert random writes into sequential disk I/O, making them ultra-fast for write-heavy workloads.
+
+----------------------------
+# Deep Dives into topics
+### Message Queues
+* An asynchronous communication middelware that recieves, holds and delivers messages between software services. It is used rather than software services directly communicate with each other over synchronous HTTP connections.
+* If an API endpoint has to update a database, render an email, generate a PDF receipt, and trigger a mobile push, the user is stuck waiting for hundreds or thousands of milliseconds.
+* When external networks time out or return transient errors (e.g., `HTTP 429 Too Many Requests` or `503 Service Unavailable`), the message queue system enables automated **retries** with **exponential back off and randomized jitter**.
+
+*So the basic idea is that instead of multiple services working one by one, they are put into a queue and picked up by workers to be performed asynchronously.*
+### Dead Letter Queue (DLQ)
+* Think of it as a separate waiting room for tasks that have repeatedly failed or cannot be processed.
+* Engineer later checks DQL as to why a service fails multiple times.
+### Idempotency
+* This is one of the more confusing concepts, so let's use a real example. Imagine your SMS Worker sends the customer an order confirmation. The SMS provider successfully delivers it. However, the worker crashes before recording that the task has been completed. When the worker restarts, it sees the same task in the queue and sends the SMS again. The customer receives the same confirmation twice. That's a duplicate operation.
+* To prevent this, we give each task a unique identifier (worker check redis again).
+* This is the basic idea behind idempotency: **preventing repeated processing from causing the same effect multiple times.**
+### Kafka, RabbitMQ and SQS
+| Technology | Simple explanation | Common use |
+|---|---|---|
+| RabbitMQ | A broker that routes messages to the appropriate queues | Background jobs, task processing, routing |
+| Apache Kafka | A distributed event log that retains events for consumers to read | Event streaming, analytics, large-scale data pipelines |
+| Amazon SQS | A managed queue service where applications send and receive messages | Background jobs without managing your own broker |
