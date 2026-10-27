@@ -30,3 +30,4 @@ A Hub of all my Documentation
 - [[DevOps]]
 - [[Programming Mohali/Programming Mohali|Programming Mohali]]
 - [[System Design]]
+- [[Programming Local AI - Phase 2]]

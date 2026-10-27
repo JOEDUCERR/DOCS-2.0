@@ -4,3 +4,4 @@
 [[Arch Install]]
 [[Mail Automation]]
 [[LinuxUpskillChallenge]]
+[[Linux Admin Crash Course]]
