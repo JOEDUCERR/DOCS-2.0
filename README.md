@@ -31,3 +31,4 @@ A Hub of all my Documentation
 - [[Programming Mohali/Programming Mohali|Programming Mohali]]
 - [[System Design]]
 - [[Programming Local AI - Phase 2]]
+- [[M365&Azure]]
