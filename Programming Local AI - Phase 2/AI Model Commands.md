@@ -21,12 +21,12 @@ CUDA_VISIBLE_DEVICES=0 /home/techlead/Documents/llama.cpp/build/bin/llama-server
 ```
 ### Qwen3-Coder-30B-A3B
 ```
-CUDA_VISIBLE_DEVICES=0,1,2,3 /home/techlead/Documents/llama.cpp/build/bin/llama-server \
-  -hf unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M \
-  --ctx-size 131072 --gpu-layers all --split-mode layer \
-  --flash-attn on --cache-type-k q8_0 --cache-type-v q8_0 \
-  --batch-size 2048 --ubatch-size 512 --threads 4 \
-  --parallel 1 --cache-reuse 256 \
-  --temp 0.7 --top-p 0.8 --top-k 20 --repeat-penalty 1.05 \
-  --jinja --alias qwen3-coder-30b --host 0.0.0.0 --port 8000
+	CUDA_VISIBLE_DEVICES=0,1,2,3 /home/techlead/Documents/llama.cpp/build/bin/llama-server \
+	  -hf unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M \
+	  --ctx-size 131072 --gpu-layers all --split-mode layer \
+	  --flash-attn on --cache-type-k q8_0 --cache-type-v q8_0 \
+	  --batch-size 2048 --ubatch-size 512 --threads 4 \
+	  --parallel 1 --cache-reuse 256 \
+	  --temp 0.7 --top-p 0.8 --top-k 20 --repeat-penalty 1.05 \
+	  --jinja --alias qwen3-coder-30b --host 0.0.0.0 --port 8000
 ```
