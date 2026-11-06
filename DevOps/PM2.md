@@ -2,7 +2,8 @@ Install: npm install pm2@latest -g
 Start: pm2 start [app.js](http://app.js) --name "my-app"
 List all processes: pm2 list
 Logs: pm2 logs
-Stop / restart: pm2 stop <app id> / pm2 restart <id>
+Stop / restart: pm2 stop (app id) / pm2 restart (id)
+Delete pm2 process: pm2 delete (app id)
 
   
 # To configure auto restart on server boot
@@ -26,4 +27,5 @@ Stop / restart: pm2 stop <app id> / pm2 restart <id>
 
 ## What to do if code updates
 
+(npm install and then reload)
 pm2 restart pm2-practice-api
