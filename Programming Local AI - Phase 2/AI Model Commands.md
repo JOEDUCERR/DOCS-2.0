@@ -10,6 +10,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 /home/techlead/Documents/llama.cpp/build/bin/llama-
   --alias qwen3.8-27b --host 0.0.0.0 --port 8000
 ```
 ### Qwen 3:8B
+*Note: Faster than all other models and fine at tool calling and web search*
 ```
 CUDA_VISIBLE_DEVICES=0 /home/techlead/Documents/llama.cpp/build/bin/llama-server \
   -m /home/techlead/.cache/huggingface/hub/models--Qwen--Qwen3-8B-GGUF/snapshots/7c41481f57cb95916b40956ab2f0b139b296d974/Qwen3-8B-Q4_K_M.gguf \
@@ -29,4 +30,39 @@ CUDA_VISIBLE_DEVICES=0 /home/techlead/Documents/llama.cpp/build/bin/llama-server
 	  --parallel 1 --cache-reuse 256 \
 	  --temp 0.7 --top-p 0.8 --top-k 20 --repeat-penalty 1.05 \
 	  --jinja --alias qwen3-coder-30b --host 0.0.0.0 --port 8000
+```
+## tensorblock/DeepSeek-R1-Distill-Qwen-7B-GGUF
+```
+CUDA_VISIBLE_DEVICES=0 /home/techlead/Documents/llama.cpp/build/bin/llama-server \
+  -m /home/techlead/models/deepseek-r1-distill-7b/deepseek-r1-distill-qwen-7b-q4_k_m.gguf \
+  --ctx-size 16384 \
+  --gpu-layers all \
+  --flash-attn on \
+  --cache-type-k q8_0 \
+  --cache-type-v q8_0 \
+  --parallel 1 \
+  --cache-reuse 256 \
+  --reasoning-budget 4096 \
+  --jinja \
+  --alias deepseek-r1-7b \
+  --host 0.0.0.0 \
+  --port 8002
+```
+## tensorblock/DeepSeek-R1-Distill-Qwen-14B-GGUF
+*Note: Good for basic coding. Not good for tool calling at all.*
+```
+CUDA_VISIBLE_DEVICES=0,2 /home/techlead/Documents/llama.cpp/build/bin/llama-server \
+  -m /home/techlead/models/deepseek-r1-distill-14b/DeepSeek-R1-Distill-Qwen-14B-Q4_K_M.gguf \
+  --ctx-size 16384 \
+  --gpu-layers all \
+  --split-mode layer \
+  --flash-attn on \
+  --cache-type-k q8_0 \
+  --cache-type-v q8_0 \
+  --parallel 1 \
+  --cache-reuse 256 \
+  --jinja \
+  --alias deepseek-r1-14b \
+  --host 0.0.0.0 \
+  --port 8002
 ```
