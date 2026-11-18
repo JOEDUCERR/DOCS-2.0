@@ -2,7 +2,6 @@ Linux Deep Dive
 
 ## Process
 * Process: running instance of a program. Any command that will start a new task.
-
 * command: 'ps' or 'Top'. -A or -e shows all processes. -r shows only running processes. H shows threads as if they were processes. -f shows full information. 'ps <ID>' shows the single process info. -e shows extended info.
 * in 'ps' output is static and not in realtime unlike top which gives realtime output.
 * >>>ps -eaf | head (helps us see the init process with PID1)
