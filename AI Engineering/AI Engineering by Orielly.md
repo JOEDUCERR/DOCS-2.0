@@ -35,7 +35,7 @@ PROMPT ENGINEERING IS NOT TRAINING. (But: By using a different prompt engineerin
 --------------------------------------------------------
 # Foundation Models
 
-* An extremely time-taking, costly and resource heavy task often done by professionals only who do not the secret sauce easily.
+* An extremely time-taking, costly and resource heavy task often done by professionals only who do not the reveal the secret sauce easily.
 ## Training Data + Real world Examples
 * Non Profit Organization created 'Common Crawl' by crawling websites on the Internet. Google provides a clean version of this called C4. Used by: GPT-3 and Gemini.
 * OpenAI used only the Reddit links that received at least three upvotes to train GPT-2.
@@ -53,7 +53,7 @@ PROMPT ENGINEERING IS NOT TRAINING. (But: By using a different prompt engineerin
 * A few advancements have been made to traditional transformer model by introducing SSS (Structured State Spaces) and then moving onto H3, Mamba and Jamba. These use multiple techniques to outperform models having more parameters using these techniques.
 ## Model Size
 The scale of a model can be determined by Number of Parameters, Number of training tokens and number of FLOPs needed for training.
-* **How do we determine which Memory Size GPU needed to do inference using a model?**: The number of parameters helps us estimate the compute resources needed to train and run this model. For example, if a model has 7 billion parameters, and each parameter is stored using 2 bytes (16 bits), then we can calculate that the GPU memory needed to do inference using this model will be at least 14 billion bytes (14 GB).
+* **How do we determine which Memory Size GPU needed to do inference using a model?**: The number of parameters helps us estimate the compute resources needed to train and run this model. For example, if a model has 7 billion parameters, and each parameter is stored using 2 bytes (16 bits or FP32), then we can calculate that the GPU memory needed to do inference using this model will be at least 14 billion bytes (14 GB).
 * Models are trained these days using datasets like: Llama 1: 1.4 trillion tokens, Llama 2: 2 trillion, Llama 3: 15 trillion (these are training tokens unlike model's own dataset tokens).
 * Assume that you have 256 H100s. If you can use them at their maximum capacity and make no training mistakes, it’d take you (3.14 × 1023) / (256 × 5.2 × 1018) = ~236 days, or approximately 7.8 months, to train GPT-3-175B. (this would cost around 4 million USD [Rs. 38,09,58,600]).
 * Anthropic discovered in 2022 that Post-training a model too much leads to it not aligning with human preference and the model tends to be more politically and socially firm: it starts taking sides.
