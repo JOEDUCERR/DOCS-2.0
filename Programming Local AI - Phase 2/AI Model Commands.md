@@ -46,7 +46,7 @@ CUDA_VISIBLE_DEVICES=0 /home/techlead/Documents/llama.cpp/build/bin/llama-server
   --jinja \
   --alias deepseek-r1-7b \
   --host 0.0.0.0 \
-  --port 8002
+  --port 8001
 ```
 ## tensorblock/DeepSeek-R1-Distill-Qwen-14B-GGUF
 *Note: Good for basic coding. Not good for tool calling at all.*
@@ -64,5 +64,5 @@ CUDA_VISIBLE_DEVICES=0,2 /home/techlead/Documents/llama.cpp/build/bin/llama-serv
   --jinja \
   --alias deepseek-r1-14b \
   --host 0.0.0.0 \
-  --port 8002
+  --port 8001
 ```
