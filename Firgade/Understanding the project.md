@@ -1,3 +1,6 @@
+ssh -i /home/joeducer/Downloads/recruitment-key.pem ubuntu@13.57.51.242
+
+
 claude auth status --text : Checking if anthropic key is present or not
 
 * Pulled the project demo files
